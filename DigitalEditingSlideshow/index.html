@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Digital Editing Workshop</title>
+
+		<meta name="description" content="Slides from CSUN Digital Editing Workshop, 12 February 2015">
+		<meta name="author" content="Scott Kleinman">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/serif.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<script>
+		function gopen() {
+			window.open("http://en.wikipedia.org/wiki/Hypertext", "Wikipedia: Hypertext", "width=750, height=550");
+		}
+		</script>
+		<style type="text/css">
+			.top-pad-30 {margin-top:30px;}
+			.fake-link {text-decoration:underline;}
+			.fake-link:hover {color:blue;cursor:pointer;}
+		</style>		
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Digital Editing Workshop</h1>
+					<h3>CSUN Digital Editing Group</h3>
+					<p>
+						<small>12 February, 2015</small>
+					</p>
+				</section>
+
+				<section>
+					<h3>What is "digital editing"?</h3>
+					<p class="top-pad-30">
+						A working definition: Textual scholarship in digital form.
+					</p>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h3>Textual Scholarship<br/>Serves Multiple Disciplines</h3>
+						<p class="top-pad-30">Historical Goals:</p>
+						<br>
+						<a href="#" class="navigate-down">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section>
+						<h3>To search for the origins of texts</h3>
+						<p class="top-pad-30">Based on surviving copies, how, under what circumstances, and in what form was the text originally produced?</p>
+					</section>
+					<section>
+						<h3>To view texts as products of their socio-historic context</h3>
+						<p class="top-pad-30">What sort of literary, historical, or archival ecology does the text belong to and what is its role in that ecology?</p>
+					</section>
+					<section>
+						<h3>To understand texts<br/>on their own merits</h3>
+						<p class="top-pad-30">What formal features are the texts composed of and how do those features operate?</p>
+					</section>
+					<section>
+						<h3>To provide greater access to texts and ensure their sustainability for use in any of the above goals</h3>
+						<p class="top-pad-30">How can we ensure that texts are available to people whilst preserving the original copies?</p>
+					</section>
+				</section>
+
+				<section>
+					<h3>Decline and Revival</h3>
+					<p class="pad-top-30">Reasons for Decline:</p>
+					<ul>
+						<li>Print culture made texts more static and print became the model of textuality.</li>
+						<li>Preservation and access became the preserve of the library sciences.</li>
+					</ul>
+					<p class="pad-top-30">Reasons for Revival:</p>
+					<ul>
+						<li>Printed editions were deconstructed, revealing the extent of editorial biases.</li>
+						<li>Book history and other material approaches revealed that even printed texts were fluid objects.</li>
+						<li>Digital tools generated potential new ways of using and understanding texts.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>The Potential of the Digital</h2>
+					<ol class="pad-top-30">
+						<li>Digitisation of texts provides access to previously unedited materials.</li>
+						<li>Digitisation highlights the materiality of the text including features lost in print editions.</li>
+						<li>Digitisation provides opportunities for greater or different types of interaction with the text.</li>
+					</ol>
+				</section>
+
+				<section>
+					<h3>Accessing this potential requires remediation</h3>
+					<blockquote>
+						&ldquo;Remediation is the process whereby computer graphics, virtual reality, and the WWW define themselves by borrowing from and refashioning media such as painting, photography, television, and film. It is the anxiety of influence acted out in the poetics of technology.&rdquo; (Bolter and Grusin, <em>Remediation</em>)
+					</blockquote>
+				</section>
+
+				<section>
+					<section>
+						<h2>Questions about Remediation</h2>
+						<ol>
+						<li class="fragment roll-in">How do we move from the physical to the digital?</li>
+						<li class="fragment roll-in">What exactly is gained and lost in the process?</li>
+						<li class="fragment roll-in">How much should the digital text look like the printed text (or like a manuscript original)?</li>
+						<li class="fragment roll-in">What types of functionality (search and analytical tools) can be available in a digital edition?</li>
+						<li class="fragment roll-in">How do the above questions change our experience of reading?</li>
+						<li class="fragment roll-in">How do these questions affect our editing goals?</li>
+						</ol>
+					</section>
+				</section>
+
+				<section data-transition="zoom">
+					<section>
+					<h3>Zooming in on the Experience of Reading</h3>
+					</section>
+					<section>
+					<h3>Hypertext Reading</h3>
+					<p class="pad-top-30">Hypertext theory <em>so</em> 90's, but the tools are still relevant. Increasingly, digital reading is an archival experience in which digital content is accessed as linked data.</p>
+					<p>Digital archives (typically produced by libraries) are increasingly blended with digital editions by modern content managment systems designed with hypertext reading in mind. An example of such a tool is <a href="http://scalar.usc.edu/works/the-hannah-more-project/index" target="_blank">Scalar</a>. 
+					</section>
+					<section>
+						<h3>Meta-Reading</h3>
+						<p class="pad-top-30">
+							The most well-known is Franco Moretti's "distant reading" in which features of multiple texts are counted and patterns are observed based on the texts' metadata.
+						</p>
+						<p>
+							A recent example is Ben Schmidt's distant reading of <a href="http://benschmidt.org/profGender/#{%22database%22%3A%22RMP%22%2C%22plotType%22%3A%22pointchart%22%2C%22method%22%3A%22return_json%22%2C%22search_limits%22%3A{%22word%22%3A%5B%22funny%22%5D%2C%22department__id%22%3A{%22%24lte%22%3A25}}%2C%22aesthetic%22%3A{%22x%22%3A%22WordsPerMillion%22%2C%22y%22%3A%22department%22%2C%22color%22%3A%22gender%22}%2C%22counttype%22%3A%5B%22WordCount%22%2C%22TotalWords%22%5D%2C%22groups%22%3A%5B%22unigram%22%5D}" target="_blank">Rate My Professor vocabulary</a> by gender.<a href="http://benschmidt.org/wp/wp-content/uploads/2015/02/top-schools.png" target="_blank">*</a>
+						</p>
+						<p>Another example is Ben Schmidt's <a href="http://3.bp.blogspot.com/-wjMRByN_3XI/VI-EBuk9oDI/AAAAAAAAGFA/ugq3F_54ZSw/s1600/manyArcs.png" target="_blank">plot arcs</a>.</p>
+					</section>
+					<section>
+						<h3>Deformance</h3>
+						<p class="pad-top-30">
+							Deformance (combining deformation and performance) is an algorithmic modification of the text to improve our understanding by changing our perspective.
+						</p>
+						<p>Topic modelling, which organises words into themes based on the likelihood that they appear together, is one form of deformance. For instance, Matthew Jockers produced 500 themes from 19th century novels <a href="http://www.matthewjockers.net/macroanalysisbook/macro-themes/" target="_blank">visualised as word clouds</a>.</p>
+					</section>
+				</section>
+
+				<section data-transition="zoom">
+					<h3>Zooming in on the Goals</h3>
+					<p class="top-pad-30">Types of Editions:</p>
+					<ol>
+					<li>Facsimile: Images of the physical object. In some editions, digital images can be manipulated.</li>
+					<li>Record Type: Transcriptions which attempt to preserve the physical layout and script/typography of the text.</li>
+					<li>Diplomatic: Transcriptions with minimal interpretation (usually just things like expansions of abbreviations or other features, depnding on the editor’s view of their interpretive significance).</li>
+					<li>Interpretive: Transcriptions with significant editorial interventions</li>
+					</ol>
+				</section>
+				<section data-transition="zoom">
+					<section>
+					<h3>Traditional Types<br/>of Interpretive Editions</h3>
+					</section>
+					<section>
+					<h4>Normalised</h4>
+					<p>Transcription of the text which is modified to correspond to some internal norm (e.g. consistent spelling, dialect, etc.).</p>
+					</section>
+					<section>
+					<h4>Resultative</h4>
+					<p>Presents a single version of the text without attesting to any historical growth or variation. Student editions are often of this type.</p>
+					</section>
+					<section>
+					<h4>Apparatus-Style</h4>
+					<p>Present a "critical apparatus" with variant forms of readings.</p>
+					</section>
+					<section>
+					<h4>Best Text</h4>
+					<p>Presents the text based on a single witness chosen because it is "better" than others according to some criterion.</p>
+					</section>
+					<section>
+					<h4>Synoptic</h4>
+					<p>Presents multiple witnesses that can be seen side by side.</p>
+					</section>
+					<section>
+					<h4>Eclectic</h4>
+					<p>Eclectic: Combines readings from multiple witnesses into a new text (which may represent a presumed lost original).
+					</section>
+				</section>				
+				<section>
+					<h3>Questions for Digital Editors</h3>
+					<ul class="pad-top-30">
+					<li>What features of traditional editions do we want to reproduce?</li>
+					<li>What shortcomings do we want to avoid?</li>
+					<li>What scholarly questions can be addressed by extending the traditional edition with digital tools?</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+					<h3>Digital editing is about collaborating with computers.</h3>
+					</section>
+					<section>
+					<h3>But what do we get when we collaborate with computers?</h3>
+					</section>
+					<section data-transition="convex">
+					<p><img src="HAL9000.jpg"/></p>
+					</section>
+					<section data-transition="convex">
+					<p><img src="Terminators.jpg"/></p>
+					</section>
+					<section data-transition="convex">
+					<p><img src="Data.jpg"/></p>
+					</section>
+					<section data-transition="convex">
+					<p><img src="Romney.jpg" style="height:50%;width:50%;"/></p>
+					</section>
+					<section data-transition="concave">
+					<iframe width="640" height="480" data-src="https://www.youtube.com/embed/lfGpVcdqeS0?rel=0&amp;showinfo=0&amp;start=16&amp;autoplay=1" frameborder="0" allowfullscreen></iframe>
+					</section>	
+				</section>			
+				<section>
+					<section data-background="#dddddd">
+						<h3>Digital Editing Models</h3>
+					</section>
+					<section>
+						<h3>Content Managements Systems</h3>
+						<ul class="pad-top-30">
+						<li>Used to store, serve, and search various types of media.</li>
+						<li>Generally used for digital archives.</li>
+						<li>Editorial work is mainly providing metadata (authorship, date, etc.) about the content.</li> 
+						</ul>
+					</section>
+					<section>
+						<h3>Crowdsourced Remediation</h3>
+						<ul class="pad-top-30">
+						<li>Typically digital archives serving images with a function to enable members of the public to create transcriptions.</li>
+						<li>Some systems allow transcribers to supply interpretive markup.</li>
+						</ul>
+					</section>					
+					<section>
+						<h3>Web Sites</h3>
+						<ul class="pad-top-30">
+						<li>Use markup languages (HTML and CSS) to present content in a browser.</li>
+						<li>Almost all digital editions now use the browser as for presentation.</li>
+						<li>Producing directly in HTML and CSS is low hanging fruit.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Descriptive Markup</h3>
+						<ul class="pad-top-30">
+						<li>Use markup languages (typically XML) to describe content.</li>
+						<li>Can be used to describe sophisticated interpretive information, as well as metadata.</li>
+						<li>Separation of content from presentation ensures platform independence.</li>
+						<li>Labour-intensive.</li>
+						</ul>
+					</section>						
+				</section>
+
+				<section data-transition="slide" data-background-transition="zoom">
+					<section>
+					<h3>An example of basic HTML</h3>
+					<pre><code data-trim contenteditable>
+<h1><em>Hamlet</em></h1>
+<p><em>Je ne sais quoi</em></p>
+					</code></pre>
+					<p>Renders as:</p>
+<h1><em>Hamlet</em></h1>
+<p><em>Je ne sais quoi</em></p>
+					</section>
+					<section>
+					<p>An example of basic XML</p>
+					<pre><code data-trim contenteditable>
+<title>Hamlet</title>
+<p xml:lang="fr" rend="italic">Je ne sais quoi</p>
+					</code></pre>
+				<p>Says: The source text has a title called "Hamlet" and a paragraph in French which is in italics.</p>
+				<p>Does not say: How the text should look in the browser. For that the XML has to be <em>transformed</em> into HTML.
+				</section>
+
+				<section>
+					<h3>A more complex example</h3>
+					<a href="extendedCode.html" target="_blank"><button>Open</button></a>
+				</section>
+
+				<section>
+					<h3>Standards, Standards, Standards</h3>
+					<p>The Text Encoding Initiative (TEI) is a set of guidelines for describing texts in XML. There are similar standards for metatadata (which can be written in TEI.</p>
+					<p>TEI helps you describe texts in a way that can be processed by computers.</p>
+					<p>TEI is extendable for the needs of individual projects. For instance, it has been developed into a <a href="http://dcl.slis.indiana.edu/cbml/" target="_blank">Comic Book Markup Language (CBML)</a>.
+				</section>
+
+				<section>
+					<p><img src="http://www.digitalhumanities.org/dhq/vol/6/1/000117/resources/images/walsh_2012_figure06.jpg" style="height:40%;width:40%;"></p>
+					<pre><code data-trim contenteditable>
+<cbml:panel ana="#action-to-action"
+    characters="#cap #anon_man" n="5" xml:id="eg_000">
+    <cbml:caption> Cap acts quickly to tranquilize the gun-happy pedestrian... </cbml:caption>
+    <cbml:balloon type="speech" who="#cap" xml:id="eg_007"> A little <emph
+            rendition="#b">sleep</emph> will do wonders for you! </cbml:balloon>
+    <sound> SPLAT! </sound>
+    <cbml:balloon type="speech" who="#anon_man"> Ugh! </cbml:balloon>
+</cbml:panel>					</code></pre>
+				</section>
+
+				<section style="text-align: left;">
+					<h1>THE END</h1>
+					<p>Made with <a href="http://lab.hakim.se/reveal-js/#/">Reveal.js</a>
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				viewDistance: 1,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+	</body>
+</html>
