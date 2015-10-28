@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Topic Modelling</title>
+
+		<meta name="description" content="Slides from the October Workshop on Building and Strengthening Digital Humanities through a Regional Network at San Diego State University, Octber 23-24, 2015">
+		<meta name="author" content="Scott Kleinman">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../revealjs/css/reveal.css">
+		<link rel="stylesheet" href="../revealjs/css/theme/serif.css" id="theme">
+		<link rel="stylesheet" href="styles.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( ../revealjs/print-pdf/gi ) ? '../revealjs/css/print/pdf.css' : '../revealjs/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>Topic Modelling</h2>
+					<h4>Workshop on Building and Strengthening Digital Humanities through a Regional Network at San Diego State University, October 23-24, 2015</h4>
+					<p class="smaller"><a href="http://scottkleinman.net">Scott Kleinman</a>, California State University, Northridge / <a href="mailto:scott.kleinman@csun.edu">scott.kleinman@csun.edu</a></p>
+				</section>
+
+				<section data-transition="concave">
+					<h3>Workshop Resources</h3>
+					<ul>
+						<li><a href="https://code.google.com/p/topic-modeling-tool/" target="_blank">The GUI Topic Modeling Tool</a></li>
+						<li><a href="http://lexos.wheatoncollege.edu/" target="_blank">Lexos Online (http://lexos.wheatoncollege.edu/)</a></li>
+						<li><a href="https://github.com/WheatonCS/Lexos/" target="_blank">Lexos on GitHub (https://github.com/WheatonCS/Lexos/)</a></li>
+						<li><a href="http://bit.ly/1MTEOoW" target="_blank">The DARIAH-DE Austen-Bronte Dataset</a></li>
+					</ul>
+				</section>
+				<section data-transition="concave">
+					<h3>What is Topic Modelling?</h3>
+					<ul>
+						<li>A form of unsupervised machine learning used to identify categories of meaning in collections of texts</li>
+						<li>Developed for information search and retrieval</li>
+						<li>Increasingly employed by scholars of history and literature to model meaning in their texts</li>
+					</ul>
+					<p>A topic model is a <strong>model</strong> of a collection of texts that assumes text are constructed from building blocks called "topics". Topic modelling algorithms use information in the texts themselves to generate the topics; they are not pre-assigned.</p>
+					<p>A topic model can produce amazing, magical insights about your texts...</p>
+				</section>
+				<section data-transition="concave">
+					<iframe width="640" height="480" data-src="https://www.youtube.com/embed/lfGpVcdqeS0?rel=0&amp;showinfo=0&amp;start=16&amp;end=32&amp;autoplay=1" frameborder="0" allowfullscreen></iframe>
+				</section>
+				<section data-transition="concave">
+					<h3>What is a "Topic"</h3>
+					<p>A probability distribution over terms.</p>
+				</section>
+				<section data-transition="concave">
+					<h3>Say what?</h3>
+					<p>A list of terms (usually words) from your text collection, each of which has a certain probability of occurring with the other terms in the list.</p>
+				</section>
+				<section>
+				<h4 style="font-size:32px;">Topic Model of US Humanities Patents (Courtesy of Alan Liu)</h4>
+<table style="font-size:16px;width:100%;">
+<tr><th width="60">Topic Number</th><th>Prominence</th><th>Keywords</th>
+</tr>
+</table>
+				<div style="height:500px;overflow:auto;">
+<table style="font-size:16px;">
+<tr><td width="60">0</td><td>0.05337</td><td>atlanta buck sherman coffee lil city soldiers union donaldson war opera music men dance wrote vamp</ire hyla vampires destruction</td></tr>
+<tr><td>1</td><td>0.03937</td><td>chinese singapore quantum scientific china percent han evidence xinjiang physics bjork language study ethnic test culture pretest memory miksic</td></tr>
+<tr><td>2</td><td>0.06374</td><td>dr medical pain osteopathic medicine brain patients doctors creativity care health smithsonian touro patient benson cancer physician skorton physicians</td></tr>
+<tr><td>3</td><td>0.12499</td><td>book poetry books literary writer writers american literature fiction writing poet author freud english novels culture published review true</td></tr>
+<tr><td>4</td><td>0.14779</td><td>museum art mr ms arts museums artist center artists music hong kong contemporary works director china painting local institute</td></tr>
+<tr><td>5</td><td>0.0484</td><td>love robinson mr godzilla slater gorman movie mother lila literature read sachs happy taught asked writing house child lived</td></tr>
+<tr><td>6</td><td>0.03013</td><td>oct org street nov center museum art gallery sundays saturdays theater free road noon arts connecticut tuesdays avenue university</td></tr>
+<tr><td>7</td><td>0.09138</td><td>johnson rights editor mr wilson poverty civil war vietnam kristof president writer jan ants hope human bill lyndon presidents</td></tr>
+<tr><td>8</td><td>0.18166</td><td>technology computer business ms tech engineering jobs mr women people science percent ireland work skills companies fields number company</td></tr>
+<tr><td>9</td><td>0.08085</td><td>israel women police violence black gender war church poland white northern officers country trial racism rights civil justice rice</td></tr>
+<tr><td>10</td><td>0.94475</td><td>advertisement people time years work make life world year young part day made place back great good times things</td></tr>
+<tr><td>11</td><td>0.08681</td><td>mr chief smith russian vista company russia financial times equity dealbook million reports street private berggruen york bank executive</td></tr>
+<tr><td>12</td><td>0.1135</td><td>street york show free sunday children saturday theater city monday tour friday martin center members students manhattan village west</td></tr>
+<tr><td>13</td><td>0.17297</td><td>times video photo community commencement article york lesson credit read tumblr online students blog digital college plan twitter news</td></tr>
+<tr><td>14</td><td>0.4395</td><td>university american research mr studies international faculty state center work dr director arts universities academic bard advertisement education history</td></tr>
+<tr><td>15</td><td>0.55649</td><td>people human world professor science humanities time knowledge life questions study learn social find ways change thinking problem don</td></tr>
+<tr><td>16</td><td>0.10946</td><td>mr ms professor marriage york wrote degree newark mondale mother born received father school aboulela ajami price married home</td></tr>
+<tr><td>17</td><td>0.3896</td><td>years government mr president report programs public american humanities state ms year million information board budget today left private</td></tr>
+<tr><td>18</td><td>0.07622</td><td>religion religious buddhist faith philosophy traditions god derrida philosophers life beliefs hope buddhism jesus doctrine stone deconstruction theology lives</td></tr>
+<tr><td>19</td><td>0.31793</td><td>students school education college schools student teachers teaching graduate year harvard percent colleges class high graduates job learning universities</td></tr>
+</table>
+</div>
+				</section>
+<section>
+	<h3>What do Topics Represent?</h3>
+	<div class="pull-left">
+	<ul>
+		<li>Subjects</li>
+		<li>Themes</li>
+		<li>Discourses</li>
+		<li>Meaningless junk</li>
+	</ul>
+	</div>
+	<p class="pull-left">Good topics are normally judged by the "semantic coherence" of their terms, but there is proven statistical heuristic for demonstrating this.</p>
+	<p class="pull-left">Typically, human intuition is used to label the topics (e.g. <strong>Religion and Deconstructionism:</strong> religion religious buddhist faith philosophy traditions god derrida ...).</p>
+	<p class="pull-left">Less semantically coherent topics can be the most interesting because they bring together terms human users might not relate.</p>
+	<p class="pull-left">Junk topics can be ignored, but a "good" topic model will have a relatively low percentage of junk topics.</p>
+</section>
+
+<section>
+	<h3>What do Topic Models Tell Us?</h3>
+	<ul>
+		<li>The topics present in the collection</li>
+		<li>The prominence of individual topics in the collection</li>
+		<li>The prominence of individual terms in each topic</li>
+		<li>The prominence of each topic in each document in the collection</li>
+		<li>The mosty prominent documents associated with each topic</li>
+	</ul>
+</section>
+<section>
+	<h3>Examples</h3>
+	<ul>
+		<li><a href="" target="_blank">Matthew Jockers, <em>Macroanalysis</em></a></li>
+		<li><a href="http://jgoodwin.net/htb/" target="_blank">Jonathan Goodwin, HathiTrust Fiction (1920-1922)</a></li>
+		<li><a href="http://dsl.richmond.edu/dispatch/Topics/view/1" target="_blank">Robert Nelson, Mining the <em>Dispatch</em></a></li>
+		<li><a href="http://4humanities.org/category/whatevery1says/" target="_blank">Alan Liu, et al., The WhatEvery1Says Project</a></li>
+	</ul>
+</section>
+<section>
+	<h3>How did they do that?</h3>
+	<ul>
+		<li>Flashy visualisation techniques that have nothing to do with topic modelling</li>
+		<li>The Dark Arts: Statistical algorithms that Muggles can understand, but not in a 60-minute workshop</li>
+		<li>Topic Modelling Tools like Mallet</li>
+	</ul>
+</section>
+<section>
+	<h4>Mallet</h4>
+	<table width="100%" style="font-size: 28px;">
+	<tr><th>Pros</th><th>Cons</th></tr>
+	<tr>
+	<td>Considered the best implementation of Latent Dirichlet Allocation (LDA), the easiest topic modelling algorithm</td>
+	<td>Written in Java, requires installation from the command line</td>
+	</tr>
+	<tr>
+	<td>The project is maintained and has a growing Digital Humanities user-base</td>
+	<td>Output is difficult to use</td>
+	</tr>
+	</table>
+</section>
+<section>
+	<h4>GUI Topic Modeling Tool</h4>
+	<table width="100%" style="font-size: 28px;">
+	<tr><th>Pros</th><th>Cons</th></tr>
+	<tr>
+	<td>.JAR wrapper for Mallet requires no installation</td>
+	<td>Doesn't implement all Mallet options</td>
+	</tr>
+	<tr>
+	<td>Easy to use graphical user interface for Mallet</td>
+	<td>Mallet version is unclear</td>
+	</tr>
+	<tr>
+	<td>Produces handy HTML topic browser</td>
+	<td>Project is not maintained</td>
+	</tr>
+	<tr>
+	<td>&nbsp;</td>
+	<td>Output is difficult to use</td>
+	</tr>
+	</table>
+</section>
+<section>
+	<h3>Other Options</h3>
+	<ul>
+		<li>Python packages like gensim and similar packages in other languages</li>
+		<li>R (Statistical programming language)</li>
+		<li>Tools that wrap Mallet (e.g. Serendip <a href="http://vep.cs.wisc.edu/serendip/" target="_blank">http://vep.cs.wisc.edu/serendip/</a> (Python) and dfr-browser <a href="http://agoldst.github.io/dfr-browser/" target="_blank">http://agoldst.github.io/dfr-browser/</a> (R)</li>
+	</ul>
+</section>
+<section>
+	<h3>Topic Modelling Resources</h3>
+	<ul>
+		<li>MALLET: <a href="http://mallet.cs.umass.edu/" target="_blank">http://mallet.cs.umass.edu/</a></li>
+		<li>The Programming Historian Tutorial: <a href="http://programminghistorian.org/lessons/topic-modeling-and-mallet" target="_blank">http://programminghistorian.org/lessons/topic-modeling-and-mallet</a></li>
+		<li>How to Create Topic Clouds with Lexos: <a href="http://scottkleinman.net/blog/2014/07/25/how-to-create-topic-clouds-with-lexos/" target="_blank">http://scottkleinman.net/blog/2014/07/25/how-to-create-topic-clouds-with-lexos/</a></li>
+		<li>How to Create and Cluster Topic Files with Lexos: <a href="http://scottkleinman.net/blog/2015/09/08/how-to-create-and-cluster-topic-files-in-lexos/" target="_blank">http://scottkleinman.net/blog/2015/09/08/how-to-create-and-cluster-topic-files-in-lexos/</a></li>
+		<li>Issue on Topic Modelling in Journal of Digital Humanities: <a href="http://journalofdigitalhumanities.org/2-1/" target="_blank">http://journalofdigitalhumanities.org/2-1/</a></li>
+		<li>Matthew Jockers, The LDA Buffet: <a href="http://www.matthewjockers.net/2011/09/29/the-lda-buffet-is-now-open-or-latent-dirichlet-allocation-for-english-majors/" target="_blank">http://www.matthewjockers.net/2011/09/29/the-lda-buffet-is-now-open-or-latent-dirichlet-allocation-for-english-majors/</a></li>
+		<li>Ted Underwood, Topic Modeling Made Just Simple Enough: <a href="http://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/" target="_blank">http://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/</a></li>
+	</ul>
+</section>
+<section>
+	<h3>What do I need?</h3>
+	<ul>
+		<li>A collection of texts in a flat folder. This is the <strong>input folder</strong>.</li>
+		<li>An empty folder to contain the results of your topic model. This is the <strong>output folder</strong>.</li>
+		<li>We'll use the GUI topic modeling tool and the DARIAH-DE Austen-Bronte dataset.</li>
+	</ul>
+</section>
+<section>
+	<h3>How do I visualise my topic model?</h3>
+	<ul>
+		<li>With difficulty</li>
+		<li>With the Lexos Multicloud Tool (if the GUI topic modeling tool outputs clean data)</li>
+	</ul>
+</section>
+<section>
+	<h3>Where do I go from here?</h3>
+	<ul>
+		<li>Try Mallet from the command line. Make sure to output the word-topic-counts file.</li>
+		<li>Feed the word-topic counts file to the Lexos Multicloud Tool for better results.</li>
+		<li>Try the Dariah-DE Python Visualizing Topic Models tutorial (<a href="https://de.dariah.eu/tatom/topic_model_visualization.html">https://de.dariah.eu/tatom/topic_model_visualization.html</a>), or maybe one of the tools that wrap Mallet.</li>
+	</ul>
+</section>
+<section>
+	<h3>If we have time...</h3>
+	<ul>
+		<li>How does Latent Dirichlet Allocation work?</li>
+		<li>How do we identify "good" and "bad" topics? "Good" and "bad" topic models?</li>
+		<li>What epistemological issues are raised by topic modelling?</li>
+	</ul>
+	<p>(Such methodological questions make very good discussion points for students.)
+</section>
+			</div>
+		</div>
+
+		<!-- Access GitHub Repo -->
+<!-- 		<script src="https://code.jquery.com/jquery-2.1.3.min.js">
+		</script>
+		<script src="Repo.js-master/repo.min.js"></script>
+		<script>
+			$('#LexosGitHub').repo({ user: 'WheatonCS', name: 'Lexos' });
+		</script>-->
+
+		<script src="../revealjs/lib/js/head.min.js"></script>
+		<script src="../revealjs/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				viewDistance: 6,
+
+//				transition: 'concave', // none/fade/slide/convex/concave/zoom
+
+    // Parallax background image
+    parallaxBackgroundImage: '', // e.g. "reveal-parallax-1.jpg"
+
+    // Parallax background size
+    parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
+
+    // This slide transition gives best results:
+    transition: 'slide',
+				
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../revealjs/plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+<!--		<script src="https://code.jquery.com/jquery-2.1.3.min.js">
+		</script>-->
+		<script>
+//		Reveal.addEventListener( 'trans', function() {
+//			var transitionType = $(".transitions").attr("data-state").replace("trans ", "");
+//			var opt = {transition: transitionType};
+//			console.log(opt);
+//			Reveal.configure(opt);
+//		}, false );
+		</script>
+	</body>
+</html>
