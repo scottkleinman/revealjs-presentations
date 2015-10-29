@@ -48,29 +48,20 @@
 				</section>
 
 				<section data-transition="concave">
-					<h3>Workshop Resources</h3>
-					<ul>
-						<li><a href="https://code.google.com/p/topic-modeling-tool/" target="_blank">The GUI Topic Modeling Tool</a></li>
-						<li><a href="http://lexos.wheatoncollege.edu/" target="_blank">Lexos Online (http://lexos.wheatoncollege.edu/)</a></li>
-						<li><a href="https://github.com/WheatonCS/Lexos/" target="_blank">Lexos on GitHub (https://github.com/WheatonCS/Lexos/)</a></li>
-						<li><a href="http://bit.ly/1MTEOoW" target="_blank">The DARIAH-DE Austen-Bronte Dataset</a></li>
-					</ul>
-				</section>
-				<section data-transition="concave">
 					<h3>What is Topic Modelling?</h3>
 					<ul>
 						<li>A form of unsupervised machine learning used to identify categories of meaning in collections of texts</li>
 						<li>Developed for information search and retrieval</li>
 						<li>Increasingly employed by scholars of history and literature to model meaning in their texts</li>
 					</ul>
-					<p>A topic model is a <strong>model</strong> of a collection of texts that assumes text are constructed from building blocks called "topics". Topic modelling algorithms use information in the texts themselves to generate the topics; they are not pre-assigned.</p>
-					<p>A topic model can produce amazing, magical insights about your texts...</p>
+					<p class="pull-left">A topic model is a <strong>model</strong> of a collection of texts that assumes text are constructed from building blocks called "topics". Topic modelling algorithms use information in the texts themselves to generate the topics; they are not pre-assigned.</p>
+					<p class="pull-left">A topic model can produce amazing, magical insights about your texts...</p>
 				</section>
 				<section data-transition="concave">
 					<iframe width="640" height="480" data-src="https://www.youtube.com/embed/lfGpVcdqeS0?rel=0&amp;showinfo=0&amp;start=16&amp;end=32&amp;autoplay=1" frameborder="0" allowfullscreen></iframe>
 				</section>
 				<section data-transition="concave">
-					<h3>What is a "Topic"</h3>
+					<h3>What is a "Topic"?</h3>
 					<p>A probability distribution over terms.</p>
 				</section>
 				<section data-transition="concave">
@@ -135,9 +126,18 @@
 	</ul>
 </section>
 <section>
+	<h3>Methodological Questions</h3>
+	<ul>
+		<li>How does the algorithm work work?</li>
+		<li>How do we identify "good" and "bad" topics? "Good" and "bad" topic models?</li>
+		<li>What epistemological issues are raised by topic modelling?</li>
+	</ul>	
+	<p class="pull-left">Such methodological questions make very good discussion points for students.</p>
+</section>
+<section>
 	<h3>Examples</h3>
 	<ul>
-		<li><a href="" target="_blank">Matthew Jockers, <em>Macroanalysis</em></a></li>
+		<li><a href="http://www.matthewjockers.net/macroanalysisbook/" target="_blank">Matthew Jockers, <em>Macroanalysis</em></a></li>
 		<li><a href="http://jgoodwin.net/htb/" target="_blank">Jonathan Goodwin, HathiTrust Fiction (1920-1922)</a></li>
 		<li><a href="http://dsl.richmond.edu/dispatch/Topics/view/1" target="_blank">Robert Nelson, Mining the <em>Dispatch</em></a></li>
 		<li><a href="http://4humanities.org/category/whatevery1says/" target="_blank">Alan Liu, et al., The WhatEvery1Says Project</a></li>
@@ -147,14 +147,13 @@
 	<h3>How did they do that?</h3>
 	<ul>
 		<li>Flashy visualisation techniques that have nothing to do with topic modelling</li>
-		<li>The Dark Arts: Statistical algorithms that Muggles can understand, but not in a 60-minute workshop</li>
-		<li>Topic Modelling Tools like Mallet</li>
+		<li>Topic Modelling Tools like <a href="http://mallet.cs.umass.edu/" target="_blank">Mallet</a></li>
 	</ul>
 </section>
 <section>
-	<h4>Mallet</h4>
+	<h4><a href="http://mallet.cs.umass.edu/" target="_blank">Mallet</a></h4>
 	<table width="100%" style="font-size: 28px;">
-	<tr><th>Pros</th><th>Cons</th></tr>
+	<tr><th width="50%">Pros</th><th width="50%">Cons</th></tr>
 	<tr>
 	<td>Considered the best implementation of Latent Dirichlet Allocation (LDA), the easiest topic modelling algorithm</td>
 	<td>Written in Java, requires installation from the command line</td>
@@ -166,9 +165,9 @@
 	</table>
 </section>
 <section>
-	<h4>GUI Topic Modeling Tool</h4>
+	<h4><a href="https://code.google.com/p/topic-modeling-tool/" target="_blank">GUI Topic Modeling Tool</a></h4>
 	<table width="100%" style="font-size: 28px;">
-	<tr><th>Pros</th><th>Cons</th></tr>
+	<tr><th width="50%">Pros</th><th width="50%">Cons</th></tr>
 	<tr>
 	<td>.JAR wrapper for Mallet requires no installation</td>
 	<td>Doesn't implement all Mallet options</td>
@@ -212,32 +211,25 @@
 	<ul>
 		<li>A collection of texts in a flat folder. This is the <strong>input folder</strong>.</li>
 		<li>An empty folder to contain the results of your topic model. This is the <strong>output folder</strong>.</li>
-		<li>We'll use the GUI topic modeling tool and the DARIAH-DE Austen-Bronte dataset.</li>
+		<li>It is good to start out with the <a href="https://code.google.com/p/topic-modeling-tool/" target="_blank">GUI Topic Modeling Tool</a> and the <a href="http://bit.ly/1MTEOoW" target="_blank">The DARIAH-DE Austen-Bront&euml; Dataset</a>. (Note. You may need to remove the umlaut from "Bront&euml;" in the folder and file names.)</li>
+		<li>To run the full version of Mallet, follow the instructions in the <a href="http://programminghistorian.org/lessons/topic-modeling-and-mallet" target="_blank">Programming Historian Tutorial</a>.</li>
 	</ul>
 </section>
 <section>
 	<h3>How do I visualise my topic model?</h3>
 	<ul>
-		<li>With difficulty</li>
-		<li>With the Lexos Multicloud Tool (if the GUI topic modeling tool outputs clean data)</li>
+		<li>With difficulty.</li>
+		<li>A good start is the <a href="http://lexos.wheatoncollege.edu/multicloud" target="_blank">Lexos Multicloud</a> tool (if the GUI Topic Modeling tool outputs clean data). See <a href="http://scottkleinman.net/blog/2014/07/25/how-to-create-topic-clouds-with-lexos/" target="_blank">How to Create Topic Clouds with Lexos</a> for instructions.</li>
+		<li>Other methods require coding and/or the use of outside visualisation tools like <a href="http://vep.cs.wisc.edu/serendip/" target="_blank">Serendip</a> or <a href="http://agoldst.github.io/dfr-browser/" target="_blank">dfr-browser</a>.
 	</ul>
 </section>
 <section>
 	<h3>Where do I go from here?</h3>
 	<ul>
-		<li>Try Mallet from the command line. Make sure to output the word-topic-counts file.</li>
-		<li>Feed the word-topic counts file to the Lexos Multicloud Tool for better results.</li>
-		<li>Try the Dariah-DE Python Visualizing Topic Models tutorial (<a href="https://de.dariah.eu/tatom/topic_model_visualization.html">https://de.dariah.eu/tatom/topic_model_visualization.html</a>), or maybe one of the tools that wrap Mallet.</li>
+		<li>Try Mallet from the command line. Make sure to output the <code>word-topic-counts file</code>.</li>
+		<li>Feed the <code>word-topic-counts</code> file to the Lexos Multicloud Tool for better results.</li>
+		<li>Try the <a href="https://de.dariah.eu/tatom/topic_model_visualization.html">Dariah-DE Python Visualizing Topic Models tutorial</a>.</li>
 	</ul>
-</section>
-<section>
-	<h3>If we have time...</h3>
-	<ul>
-		<li>How does Latent Dirichlet Allocation work?</li>
-		<li>How do we identify "good" and "bad" topics? "Good" and "bad" topic models?</li>
-		<li>What epistemological issues are raised by topic modelling?</li>
-	</ul>
-	<p>(Such methodological questions make very good discussion points for students.)
 </section>
 			</div>
 		</div>
