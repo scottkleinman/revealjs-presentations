@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Digital Humanities Projects with Small and Unusual Data: Some Experiences from the Trenches</title>
+
+		<meta name="description" content="Slides from the UC Irvine Data Science Initiative on Data Science and Digital Humanities, February 5, 2016">
+		<meta name="author" content="Scott Kleinman">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../revealjs/css/reveal.css">
+		<link rel="stylesheet" href="../revealjs/css/theme/serif.css" id="theme">
+		<link rel="stylesheet" href="styles.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( ../revealjs/print-pdf/gi ) ? '../revealjs/css/print/pdf.css' : '../revealjs/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h3>Digital Humanities Projects with Small and Unusual Data:<br>
+					Some Experiences from the Trenches
+					</h3>
+					<h4>UC Irvine Data Science Initiative on Data Science and Digital Humanities, February 5, 2016</h4>
+					<p class="smaller"><a href="http://scottkleinman.net">Scott Kleinman</a>, California State University, Northridge / <a href="mailto:scott.kleinman@csun.edu">scott.kleinman@csun.edu</a></p>
+					<p class="smaller"><a href="http://scottkleinman.github.io/revealjs-presentations/UCI-Symposium/dh-projects-with-small-and-unusual-data.html">http://scottkleinman.github.io/revealjs-presentations/UCI-Symposium/dh-projects-with-small-and-unusual-data.html</a>
+				</section>
+				<section data-transition="concave">
+					<h4>Simple Schema of the Humanities Interpretive Process</h4>
+					<p class="pull-left">1. Primary Texts (data)</p>
+					<p class="pull-left">2. Disciplinary expertise (metadata on speed)</p>
+					<p class="pull-left">3. Interpretive acts (close reading, synecdoche, rhetorical persuasion)</p>
+				</section>
+
+				<section>
+					<iframe width="1000" height="550" data-src="http://doe.utoronto.ca/pages/index.html"></iframe>
+					<small><a href="http://doe.utoronto.ca/pages/index.html" target="_blank"><em>The Dictionary of Old English</em> and Old English Corpus</small>
+				</section>
+
+				<section>
+					<section>
+						<a href="http://www.bl.uk/manuscripts/Viewer.aspx?ref=cotton_ms_tiberius_a_vi_f001r" target="_blank"><img src="ASC.png" width="50%" height="50%" alt="London, British Library, Cotton Tiberius A vi, recently digitised"/></a>
+						<small><a href="http://www.bl.uk/manuscripts/Viewer.aspx?ref=cotton_ms_tiberius_a_vi_f001r" target="_blank">London, British Library, Cotton Tiberius A vi, recently digitised</a></small>
+					</section>
+					<section data-transition="concave">
+						<h3 class="pull-left">But really...</h3>
+						<br/>
+						<h3>Digital Humanities<br/>=<br/>Nineteenth-Century Studies?</h3>
+					</section>
+				</section>
+				<section>
+					<img src="lexosBubbleViz.png" alt="Lexos BubbleViz"/>
+					<small>Lexos BubbleViz of two Classical Chinese Texts</small>
+				</section>
+				<section>
+					<img src="malletTopicClouds.png" alt="Lexos MultiCloud"/>
+					<small>Lexos Multicloud showing part of a topic model of <em>The New York Times</em> produced by Alan Liu</small>
+				</section>
+				<section>
+					<img src="DAZ.png" width="60%" height="60%" alt="Cluster analysis of Daniel and Azarias"/>
+					<p><small>Cluster Analysis of <em>Daniel</em> and <em>Azarias</em></small></p>
+				</section>
+				<section>
+					<h4>Some Orthographic Variations from <em>Beowulf</em></h4>
+					<table>
+						<tr>
+							<td>eaðe/eaðe/yðe</td><td>licgan/licgean</td>
+						</tr>
+						<tr>
+							<td>fah/fag</td><td>maþmum/madmum</td>
+						</tr>
+						<tr>
+							<td>feaxe/fexe</td><td>sellic/syllic</td>
+						</tr>
+						<tr>
+							<td>gedryht/gedriht</td><td>wlonc/wlanc</td>
+						</tr>
+						<tr>
+							<td>gæst/gast</td><td>libban/lifcgan</td>
+						</tr>
+						<tr>
+							<td colspan="2">yldum/eldum</td>
+						</tr>
+					</table>
+					<p><small>From Katherine O'Brien O'Keeffe, <em>Visible Song: Transitional Literacy in Old English Verse</em> (Cambridge University Press, 1990)</small></p>
+				</section>
+				<section>
+					<img src="Beowulf.png" width="60%" height="60%" alt="Cluster analysis of Beowulf showing Scribe B"/>
+					<p><small>Cluster Analysis of <em>Beowulf</em> showing Scribe B</small></p>
+				</section>
+				<section>
+					<h4>Sample Entropy Values</h4>
+					<table>
+						<tr>
+							<th>Texts</th><th>Bits per Letter</th>
+						</tr>
+						<tr>
+							<td>Modern English (ave.)</td><td>4.03</td>
+						</tr>
+						<tr>
+							<td><em>Beowulf</em></td><td>4.18</td>
+						</tr>
+						<tr>
+							<td>Beginning of Bede's <em>Historia ecclesiastica</em></td><td>4.24</td>
+						</tr>
+						<tr>
+							<td><em>Daniel</em> and <em>Azarias</em> (ave.)</td><td>4.30</td>
+						</tr>
+						<tr>
+							<td>Early Middle English Texts (ave.)</td><td>4.60</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<a href="http://www.bl.uk/manuscripts/Viewer.aspx?ref=cotton_ms_cleopatra_c_vi_f002r" target="_blank"><img style="height:500px;width:500px;" data-src="AncreneWisse.PNG" alt="British Library, Cotton MS Cleopatra C vi, f. 4r"/></a>
+					<p><a href="http://www.bl.uk/manuscripts/Viewer.aspx?ref=cotton_ms_cleopatra_c_vi_f002r" target="_blank"><small>British Library, Cotton MS Cleopatra C vi, f. 4r</small></a></p>
+				</section>				
+				<section>
+					<h3>Sample Early Middle English Corpus</h3>
+					<ul style="font-size: smaller;">
+						<li>The AB language is a term coined in 1929 by J.R.R. Tolkien to refer to the standardised language of two manuscripts of <em>Ancrene Wisse</em>, a guide for anchoresses.</li>
+						<li>The language is shared by a group of texts from the English West Midlands including <em>Hali Meiðhad</em> ("Holy Maidenhood"), <em>Sawles Warde</em> ("Refuge of the Souls"), and a life of <em>Saint Juliana</em>.</li>
+						<li><em>The Lambeth Homilies</em> is a collection of sermons which also comes from the West Midlands but does not share the AB language forms. <em>The Kentish Sermons</em> come from southeastern England.</li>
+					</ul>
+				</section>
+				<section>
+					<img src="EME1.png" width="55%" height="55%" alt="Cluster analysis of Early Middle English Texts"/>
+					<p><small>Cluster Analysis of Early Middle English Texts</small></p>
+				</section>
+				<section>
+					<img src="EMEMulticlouds.png" alt="Word Clouds of Early Middle English texts"/>
+					<p><small>Word Clouds of Early Middle English texts</small></p>
+				</section>
+				<section>
+					<img src="EME2.png" width="55%" height="55%" alt="Cluster analysis of Early Middle English texts after consolidations"/>
+					<p><small>Cluster Analysis of Early Middle English texts after consolidations</small></p>
+				</section>
+				<section>
+					<img src="AEME.png" alt="Snippet of AEME code"/>
+					<p><small>Snippet of AEME code</small></p>
+				</section>
+				<section>
+					<h3>Some Lessons from the Trenches</h3>
+					<ul>
+						<li>We need some entry-level literature about the application of statistical methods to humanities materials--particularly when our type of data differs from the standard types used by statisticians. [<a href="http://scalar.usc.edu/works/lexos/cluster-analysis" target="_blank">Lexos <em>In the Margins</em>]</a></li>
+						<li>It is important to emphasise workflow&emdash;and involve students in all stages of it.</li>
+						<li>We need to develop methods of and resources for processing highly entropic data.</li>
+						<li>The pay-off for this is often unclear, and we may need to cultivate (and reward) a sort of playful hermeneutics in working with this data.</li>
+						<li>There is a tremendous pay-off for students in participating in these processes.</li>
+					</ul>
+				</section>
+				<section data-transition="concave">
+					<h3>Lexos</h3>
+					<br/>
+					<h4 class="pull-left">Online: <a href="http://lexos.wheatoncollege.edu/" target="_blank">http://lexos.wheatoncollege.edu/</a></h4>
+					<h4 class="pull-left">On GitHub: <a href="https://github.com/WheatonCS/Lexos" target="_blank">https://github.com/WheatonCS/Lexos</a></h4>
+					<br/>
+					<p class="pull-left">Made with <a href="http://lab.hakim.se/reveal-js/#/">Reveal.js</a>
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<!-- Access GitHub Repo -->
+<!-- 		<script src="https://code.jquery.com/jquery-2.1.3.min.js">
+		</script>
+		<script src="Repo.js-master/repo.min.js"></script>
+		<script>
+			$('#LexosGitHub').repo({ user: 'WheatonCS', name: 'Lexos' });
+		</script>-->
+
+		<script src="../revealjs/lib/js/head.min.js"></script>
+		<script src="../revealjs/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				viewDistance: 5,
+
+//				transition: 'concave', // none/fade/slide/convex/concave/zoom
+
+    // Parallax background image
+    parallaxBackgroundImage: '', // e.g. "reveal-parallax-1.jpg"
+
+    // Parallax background size
+    parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
+
+    // This slide transition gives best results:
+    transition: 'slide',
+				
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../revealjs/plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+<!--		<script src="https://code.jquery.com/jquery-2.1.3.min.js">
+		</script>-->
+		<script>
+//		Reveal.addEventListener( 'trans', function() {
+//			var transitionType = $(".transitions").attr("data-state").replace("trans ", "");
+//			var opt = {transition: transitionType};
+//			console.log(opt);
+//			Reveal.configure(opt);
+//		}, false );
+		</script>
+	</body>
+</html>
