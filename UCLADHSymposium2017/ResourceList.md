@@ -1,8 +1,11 @@
 # Resources for This Tutorial
 
+## Short Link for This Page
+[http://bit.ly/2lCeQif](http://bit.ly/2lCeQif)
+
 ## Tutorial Slideshows and Data Links
 - Text Analysis with _Lexos_ Workshop Slideshow: [http://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/Text-Analysis-With-Lexos.html](http://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/Text-Analysis-With-Lexos.html)
-- Topic Modelling: [http://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/Text-Analysis-With-Lexos.html](http://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/Text-Analysis-With-Lexos.html
+- Topic Modelling: [http://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/Text-Analysis-With-Lexos.html](http://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/Text-Analysis-With-Lexos.html)
 - _Lexos_ `TestSuite` Experiments Data: [https://github.com/scottkleinman/Lexos-TestSuite/blob/master/Experiments.zip](https://github.com/scottkleinman/Lexos-TestSuite/blob/master/Experiments.zip)
 - Additional Data for This Workshop: [http://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/more-data.zip](http://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/more-data.zip)
 - This resource list: [https://github.com/scottkleinman/revealjs-presentations/blob/gh-pages/UCLADHSymposium2017/ResourceList.md](https://github.com/scottkleinman/revealjs-presentations/blob/gh-pages/UCLADHSymposium2017/ResourceList.md)
