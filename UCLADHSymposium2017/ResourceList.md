@@ -3,7 +3,7 @@
 ## Short Link for This Page
 [http://bit.ly/2lCeQif](http://bit.ly/2lCeQif)
 
-## Tutorial Slideshows and Data Links
+## Tutorial Slideshows and Workshop Data Links
 - Text Analysis with _Lexos_ Workshop Slideshow: [http://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/Text-Analysis-With-Lexos.html](http://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/Text-Analysis-With-Lexos.html)
 - Topic Modelling: [http://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/Text-Analysis-With-Lexos.html](http://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/Text-Analysis-With-Lexos.html)
 - _Lexos_ `TestSuite` Experiments Data: [https://github.com/scottkleinman/Lexos-TestSuite/blob/master/Experiments.zip](https://github.com/scottkleinman/Lexos-TestSuite/blob/master/Experiments.zip)
@@ -12,6 +12,7 @@
 
 ## Lexomics and _Lexos_ Links
 - Lexomics Home Page: [http://wheatoncollege.edu/lexomics/](http://wheatoncollege.edu/lexomics/)
+- _Lexos_ Online: [http://lexos.wheatoncollege.edu/](http://lexos.wheatoncollege.edu/)
 - _Lexos_ Online and _Lexos_ Installer Links: [http://wheatoncollege.edu/lexomics/lexos-installers/](http://wheatoncollege.edu/lexomics/lexos-installers/)
 - _Lexos_ Issues Form (for reporting bugs and making feature requests): [https://github.com/WheatonCS/Lexos/issues](https://github.com/WheatonCS/Lexos/issues)
 - _In the Margins_: [http://scalar.usc.edu/works/lexos](http://scalar.usc.edu/works/lexos)
