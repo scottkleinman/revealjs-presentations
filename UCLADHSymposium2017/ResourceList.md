@@ -1,11 +1,11 @@
 # Resources for This Tutorial
 
 ## Tutorial Slideshows and Data Links
-- Text Analysis with _Lexos_ Workshop Slideshow: [http://scottkleinman.net/workshops/UCLADHSymposium2017/Text-Analysis-With-Lexos.html](http://scottkleinman.net/workshops/UCLADHSymposium2017/Text-Analysis-With-Lexos.html)
-- Topic Modelling: [http://scottkleinman.net/workshops/UCLADHSymposium2017/Topic-Modelling.html](http://scottkleinman.net/workshops/UCLADHSymposium2017/Topic-Modelling.html)
+- Text Analysis with _Lexos_ Workshop Slideshow: [http://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/Text-Analysis-With-Lexos.html](http://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/Text-Analysis-With-Lexos.html)
+- Topic Modelling: [hhttp://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/Text-Analysis-With-Lexos.html](http://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/Text-Analysis-With-Lexos.html
 - _Lexos_ `TestSuite` Experiments Data: [https://github.com/scottkleinman/Lexos-TestSuite/blob/master/Experiments.zip](https://github.com/scottkleinman/Lexos-TestSuite/blob/master/Experiments.zip)
-- Additional Data for This Workshop: [https://github.com/scottkleinman/revealjs-presentations/revealjs-presentations/UCLADHSymposium2017/more-data.zip](https://github.com/scottkleinman/revealjs-presentations/revealjs-presentations/UCLADHSymposium2017/more-data.zip)
-- This resource list: [https://github.com/scottkleinman/revealjs-presentations/revealjs-presentations/UCLADHSymposium2017/ResourceList.md](https://github.com/scottkleinman/revealjs-presentations/revealjs-presentations/UCLADHSymposium2017/ResourceList.md)
+- Additional Data for This Workshop: [http://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/more-data.zip](http://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/more-data.zip)
+- This resource list: [https://github.com/scottkleinman/revealjs-presentations/blob/gh-pages/UCLADHSymposium2017/ResourceList.md](https://github.com/scottkleinman/revealjs-presentations/blob/gh-pages/UCLADHSymposium2017/ResourceList.md)
 
 ## Lexomics and _Lexos_ Links
 - Lexomics Home Page: [http://wheatoncollege.edu/lexomics/](http://wheatoncollege.edu/lexomics/)
