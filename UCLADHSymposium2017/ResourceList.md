@@ -2,7 +2,7 @@
 
 ## Tutorial Slideshows and Data Links
 - Text Analysis with _Lexos_ Workshop Slideshow: [http://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/Text-Analysis-With-Lexos.html](http://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/Text-Analysis-With-Lexos.html)
-- Topic Modelling: [hhttp://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/Text-Analysis-With-Lexos.html](http://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/Text-Analysis-With-Lexos.html
+- Topic Modelling: [http://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/Text-Analysis-With-Lexos.html](http://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/Text-Analysis-With-Lexos.html
 - _Lexos_ `TestSuite` Experiments Data: [https://github.com/scottkleinman/Lexos-TestSuite/blob/master/Experiments.zip](https://github.com/scottkleinman/Lexos-TestSuite/blob/master/Experiments.zip)
 - Additional Data for This Workshop: [http://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/more-data.zip](http://scottkleinman.github.io/revealjs-presentations/UCLADHSymposium2017/more-data.zip)
 - This resource list: [https://github.com/scottkleinman/revealjs-presentations/blob/gh-pages/UCLADHSymposium2017/ResourceList.md](https://github.com/scottkleinman/revealjs-presentations/blob/gh-pages/UCLADHSymposium2017/ResourceList.md)
@@ -43,8 +43,8 @@
 - Reveal.js: [http://lab.hakim.se/reveal-js/#/](http://lab.hakim.se/reveal-js/#/)
 
 ## Datasets
-- The Dariah-DE datasets: []()
-- _A Good Mystery_: Collection of Edgar Allan Poe text with clustering experiments:  [https://github.com/WheatonCS/aGoodMystery/tree/master/step_2_Clustering](https://github.com/WheatonCS/aGoodMystery/tree/master/step_2_Clustering)
+- The Dariah-DE datasets: [https://de.dariah.eu/tatom/datasets.html](https://de.dariah.eu/tatom/datasets.html)
+- _A Good Mystery_: Collection of Edgar Allan Poe text with clustering experiments: [https://github.com/WheatonCS/aGoodMystery/tree/master/step_2_Clustering](https://github.com/WheatonCS/aGoodMystery/tree/master/step_2_Clustering)
 
 ## Tutorials
 - The Programming Historian Tutorial on Topic Modeling and MALLET: [http://programminghistorian.org/lessons/topic-modeling-and-mallet](http://agoldst.github.io/dfr-browser/)
@@ -54,6 +54,6 @@
 ## Books, Articles, and Projects
 - Issue on Topic Modelling in the _Journal of Digital Humanities_: [http://journalofdigitalhumanities.org/2-1/](http://journalofdigitalhumanities.org/2-1/)
 - Jonathan Goodwin, HathiTrust Fiction (1920-1922): [http://jgoodwin.net/htb/](http://jgoodwin.net/htb/)
-- Matthew Jockers, _Macroanalysis_: [http://www.matthewjockers.net/macroanalysisbook/](
+- Matthew Jockers, _Macroanalysis_: [http://www.matthewjockers.net/macroanalysisbook/](http://www.matthewjockers.net/macroanalysisbook/)
 - Robert Nelson, Mining the _Dispatch_: [http://dsl.richmond.edu/dispatch/Topics/view/1](http://dsl.richmond.edu/dispatch/Topics/view/1)
 - Matthew Jockers, _Text Analysis with R for Students of Literature_: [http://www.matthewjockers.net/text-analysis-with-r-for-students-of-literature/](http://www.matthewjockers.net/text-analysis-with-r-for-students-of-literature/)
