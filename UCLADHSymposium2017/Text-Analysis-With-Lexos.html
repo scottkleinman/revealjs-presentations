@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Text Analysis with Lexos</title>
+
+		<meta name="description" content="Slides from the Text Analysis with Lexos Workshop at the UCLA DH Infrastructure Symposium, February 24, 2017">
+		<meta name="author" content="Scott Kleinman">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../revealjs/css/reveal.css">
+		<link rel="stylesheet" href="../revealjs/css/theme/serif.css" id="theme">
+		<link rel="stylesheet" href="styles.css" id="theme">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+		<!-- Code syntax highlighting -->
+<!-- 		<link rel="stylesheet" href="../revealjs/lib/css/zenburn.css">
+ -->
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			//link.href = window.location.search.match( ../revealjs/print-pdf/gi ) ? '../revealjs/css/print/pdf.css' : '../revealjs/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs/lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<style type="text/css">
+			h1 {font-size: 48pt !important;}
+			h2 {font-size: 36pt !important;}
+			h3 {font-size: 32pt !important;}
+			h4 {font-size: 28pt !important;}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+		<meta name="description" content="Slides from the Text Analysis with Lexos Workshop ">
+
+					<h1>Text Analysis with <em>Lexos</em></h1>
+					<h4>Workshop at the UCLA DH Infrastructure Symposium, February 24, 2017</h4>
+					<p class="smaller"><a href="http://scottkleinman.net">Scott Kleinman</a>, California State University, Northridge / <a href="mailto:scott.kleinman@csun.edu">scott.kleinman@csun.edu</a></p>
+				</section>
+				<section data-transition="concave">
+					<h1>What is Text Analysis</h1>
+					<br/>
+					<h4 class="pull-left">My current definition:</h4>
+					<p class="pull-left">(Computationally) finding quantitative patterns in natural language samples and attributing meaning to these patterns.</p>
+				</section>
+
+				<section>
+					<h4>Digital Text Analysis and the Disciplines</h4>
+					<a href="https://tedunderwood.files.wordpress.com/2015/05/casualmap1.jpg?w=584" target="_blank"><img data-src="https://tedunderwood.files.wordpress.com/2015/05/casualmap1.jpg?w=584" alt="Digital Text Analysis and the Disciplines"/></a>
+					<small>Ted Underwood, <a href="http://tedunderwood.com/2015/06/04/seven-ways-humanists-are-using-computers-to-understand-text/" target="_blank"><em>Seven ways humanists are using computers to understand text</em></a></small>
+				</section>
+
+				<section>
+					<section>
+						<h3>Examples of Visualising Texts<br/>and Feature Selection</h3>
+						<p><a href="Text-Analysis-With-Lexos.html#/3/1"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></a></p>
+					</section>
+					<section data-transition="concave">
+						<h4>Voyant Provides Visual Tools for Text Exploration</h4>	
+						<iframe width="1000" height="550" data-src="http://voyant-tools.org/?corpus=1445204720176.505"></iframe>
+						<small><a href="http://voyant-tools.org/?corpus=1445204720176.505" target="_blank">The 1840 Democratic Political Party Platform visualised in Voyant</a><br/>http://voyant-tools.org/</small>
+					</section>
+					<section data-transition="concave">
+						<h4>Google N-Gram Viewer Shows the Frequency of Words and Phrases in the Google Books Corpus</h4>
+						<iframe name="ngram_chart" data-src="https://books.google.com/ngrams/interactive_chart?content=government%2C+constitution%2C+federal+government&amp;year_start=1700&amp;year_end=2000&amp;corpus=15&amp;smoothing=3&amp;share=&amp;direct_url=t1%3B%2Cgovernment%3B%2Cc0%3B.t1%3B%2Cconstitution%3B%2Cc0%3B.t1%3B%2Cfederal%20government%3B%2Cc0" width="1000" height="300" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
+						<small class="pull-left" style="margin-left:22px;margin-right:2px;">Occurrences of the phrases phrases "government", "constitution", "federal government" visualised in the Google N-Gram Viewer: https://books.google.com/ngrams/.</small>
+					</section>
+					<section data-transition="concave">
+						<h4>Statistical Procedures Can Provide<br/>Insight into Authorship and Genre</h4>
+						<a href="http://f.hypotheses.org/wp-content/blogs.dir/857/files/2013/09/genres2-pca.png" target="_blank"><img data-src="http://f.hypotheses.org/wp-content/blogs.dir/857/files/2013/09/genres2-pca.png" alt="PCA Analysis of Renaissance French drama"/ height="500" width="500"/></a>
+						<a href="http://dragonfly.hypotheses.org/472" target="_blank"><small>Christof Schöch's Principal Component Analysis for four sets of Renaissance French plays</small></a>
+					</section>
+					<section data-transition="concave">
+						<h4>Many Tools for Text Analysis and Other<br/>DH Methods Are Listed in the DiRT Directory</h4>
+						<br/>
+						<a href="http://dirtdirectory.org/" target="_blank">
+						<img src="http://dirtdirectory.org/sites/dirtdirectory.org/files/dirt.png" alt="DiRT Directory Logo" style="border:none;"/>
+						<!-- <iframe width="1000" height="550" data-src="http://dirtdirectory.org/"></iframe> --><br/>
+						<small>DiRT Directory: http://dirtdirectory.org/</small></a>
+					</section>
+				</section>
+				<section>
+					<h3>Types of Text Analysis</h3>
+					<br/>
+					<ul>
+						<li>Structured v. Unstructured Data: Data accompanied by tagging or metadata is structured.</li>
+						<li>Supervised v. "Unsupervised" Algorithms: It is almost impossible to implement an experiment without <em>some</em> human decision-making.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Text Analysis Workflow 1</h3>
+					<br/>
+					<ul>
+						<li>Pre-Processing</li>
+						<li>Statistical Processing</li>
+						<li>Visualisation</li>
+						<br/>
+						<li>Narrative of Meaning</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Pre-Processing</h3>
+					<br/>
+					<ul>
+						<li>Clean up OCR</li>
+						<li>Remove metadata, punctuation, digits, stop words</li>
+						<li>Transform tokens (consolidation, lemmatisation)</li>
+						<li>Slicing and dicing</li>
+						<li>Assigning labels</li>
+					</ul>
+					<p class="pull-left">Pre-processing creates a "deformed" version of the original text for analysis.</p>
+				</section>
+				<section>
+					<h3>Statistical Processing</h3>
+					<br/>
+					<ul>
+						<li>Token counting (e.g. characters, words, n-grams)</li>
+						<li>Normalisation (e.g. to compare texts of unequal size)</li>
+						<li>Frequency/Probability Comparison (e.g. between the number of times a word occurs in two texts)</li>
+						<li>Clustering (identifying groups of tokens/texts with common statistical properties)</li>
+						<li>Shape quantitative information about the texts for visualisation/interpretation.</li>
+					</ul>
+					<p class="pull-left">Statistical processing transforms the text from natural language to quantitative data. This type of “deformance” typically involves dimensionality reduction, a simplification of the data so that it can be represented in two-dimensional space.</p>
+				</section>
+				<section>
+					<h3>Visualisation</h3>
+					<br/>
+					<ul>
+						<li>Arranging quantitative data in graphical format to make it (hopefully) more interpretable than formats in which the data is stored.</li>
+						<li>Visualisation is “the reification of misinformation” (Johanna Drucker), so it requires a clear account of the procedures used to make the graph and critical literacy about how to interpret visualisations on the par of the reader.</li>
+				</section>
+				<section>
+					<h3>Narrative of Meaning</h3>
+					<br/>
+					<ul>
+						<li>An account of the significance of the results of text analysis.</li>
+						<li>Must include an account of the decisions made as part of pre-processing, statistical processing, and visualisation.</li>
+				</section>				
+				<section>
+					<h3>Text Analysis Workflow 2</h3>
+					<br/>
+					<ul>
+						<li>Re-consider some of the decisions you have made.</li>
+						<li>Repeat Text Analysis Workflow 1.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Useful Terminology</h3>
+					<br/>
+					<ul>
+						<li><b>Document:</b> a whole text or a segment of a text.</li>
+						<li><b>Token:</b> an individual occurrence of a countable item in a document (typically a word).</li>
+						<li><b>Term (also <i>Type</i>):</b> A distinct form of a token that may occur one or more times in a document.</li>
+						<li><b>Lemma:</b> The “dictionary headword” form of a token without morphological or spelling variants.</li>
+						<li><b>Bag of Words:</b> Set of tokens or terms lacking their order or placement in the original source text(s).</li>
+						<li><b>Document-Term Matrix (DTM):</b> A table showing the number of times each term occurs in each document.</li>
+					</ul>
+				</section>
+				<section data-transition="concave">
+					<h3>Sample Document-Term Matrix</h3>
+					<br/>
+					<table style="font-size: smaller;">
+						<tr>
+							<th></th><th>Term 1</th><th>Term 2</th><th>Term 3</th><th>Term 4</th><th>...</th>
+						</tr>
+						<tr>
+							<td>Document 1</td><td>50</td><td>27</td><td>3</td><td>12</td><td></td>
+						</tr>
+						<tr>
+							<td>Document 2</td><td>75</td><td>3</td><td>1</td><td>1</td><td></td>
+						</tr>
+						<tr>
+							<td>Document 3</td><td>64</td><td>1</td><td>1</td><td>1</td><td></td>
+						</tr>
+						<tr>
+							<td>Document 4</td><td>31</td><td>12</td><td>5</td><td>10</td><td></td>
+						</tr>
+						<tr>
+							<td>...</td><td></td><td></td><td></td><td></td><td></td>
+						</tr>
+					</table>
+				</section>
+				<section data-transition="concave">
+					<h3>A Basic Epistemological Question</h3>
+					<br/>
+					<p class="pull-left">If each stage is a transformation (“deformance”) of the source text, how do we relate the results of this transformation to the original?</p>
+				</section>
+				<section>
+					<h3>Challenges for Humanists</h3>
+					<br/>
+					<ul>
+						<li>Technical difficulties (lack of coding skills or appropriate tools)</li>
+						<li>Fear of statistics/seduction of the black box</li>
+						<li>Scepticism of the ability of statistical patterns to capture meaning in linguistic/cultural objects</li>
+						<li>80% of the work in collaborating with computers is pre-processing</li>
+					</ul>
+				</section>
+				<section>
+					<h3><em>Lexos</em> and Lexomics</h3>
+					<p class="pull-left"><em>Lexos</em> is an easy-to-use tool that handles many the basic tasks in a typical text analysis workflow.</p>
+					<p class="pull-left"><em>Lexos</em> arose from the Lexomics project, which seeks to use computational approaches to study patterns in literature. Literature and computer science students work alongside one another doing research and developing tools in response to questions generated by the research.</p>
+					<!-- <p class="pull-left">The next slide (which may load slowly) shows some scenes from one of our summer research sessions.</p> -->
+				</section>
+				<!-- Lexomics Video -->
+				<!-- <section data-background-iframe="http://cs.wheatoncollege.edu/lexomics/"> -->
+				</section>
+				<section>
+					<h2>Goals of <em>Lexos</em></h2>
+					<ul>
+						<li>Easy-to-use.</li>
+						<li>Provide a complete workflow.</li>
+						<li>Cater to small and medium-sized corpora.</li>
+						<li>Cater to non-standard languages and languages with non-Latin writing systems.</li>
+						<li>Embed the critical process into the user interface.</li>
+					</ul>
+				</section>
+				<section data-transition="concave">
+					<h3>Accessing and Installing <em>Lexos</em></h3>
+					<a href="http://wheatoncollege.edu/lexomics/lexos-installers/" target="_blank"><iframe src="http://wheatoncollege.edu/lexomics/lexos-installers/" width="1000" height="500" alt="Lexomics website"/></iframe></a>
+				</section>
+				<section data-transition="concave">
+					<h3>Online or Local?</h3>
+					<p class="pull-left">Online is good for classroom settings or newcomers to text analysis.</p>
+					<p class="pull-left">Local installations are faster, don't require internet access, and has the latest bug fixes.</p>
+					<p class="pull-left">Reporting bugs and Making Feature Requests:<br/><br/><a href="https://github.com/WheatonCS/Lexos/issues" target="_blank">https://github.com/WheatonCS/Lexos/issues</a>.</p>
+				</section>
+				<section data-transition="concave">
+					<h3>Learning <em>Lexos</em></h3>
+					<p class="pull-left">The following slides provide some sample experiments with <em>Lexos</em> that showcase many of its important features. Sample texts are in the <code>TestSuite</code> folder of your local installation. If you do not have a local installation, you can download the TestSuite files at <a href="https://github.com/scottkleinman/Lexos-TestSuite/blob/master/Experiments.zip" target="_blank">http://bit.ly/2lwuWKe</a>.</p>
+					<p class="pull-left">For this workshop, we will also use some data from <a href="https://github.com/scottkleinman/revealjs-presentations/revealjs-presentations/UCLADHSymposium2017/more-data.zip" target="_blank">https://github.com/scottkleinman/revealjs-presentations/revealjs-presentations/UCLADHSymposium2017/more-data.zip</a>. You can extract it to your <code>TestSuite</code> folder or make a new one.</p>
+				</section>
+				<section id="transitions" class="transitions" data-state="trans concave">
+					<section data-transition="zoom">
+						<h3>The "DAZ" Experiment</h3>
+						<img data-src="images/Daniel.PNG" alt="Daniel" height="500"/>
+					</section>
+					<section>
+						<ul>
+							<li><b>Source Texts:</b> <code>https://github.com/WheatonCS/Lexos/tree/master/TestSuite/Experiments/AngloSaxon/DAZ/FilesToUse</code></li>
+							<li><b>Instructions:</b> <code>https://github.com/WheatonCS/Lexos/blob/master/TestSuite/Experiments/AngloSaxon/DAZ/_README_DAZ.txt</code></li>
+							<li><b>Purpose:</b> Find a section in a text that is similar to a different text.</li>
+							<li><b>Background:</b> <em>Daniel</em> is an Anglo-Saxon versification of the biblical book of Daniel. It has long been known that a section of the poem (lines 279-408) bears a relationship to another another Old English poem, <em>Azarias</em>, although one is not the direct source of the other.</li>
+						</ul>
+					</section>
+					<section data-transition="slide">
+						<h2>Methodological Questions</h2>
+						<ul>
+							<li>Can we reproduce traditional scholarly results using “bag of words” methods and cluster analysis?</li>
+							<li>What kind of challenges do we face working with texts in Old English?</li>
+						</ul>
+					</section>
+					<section data-transition="slide">
+						<h3>Pre-Processing Considerations</h3>
+						<ul>
+							<li><strong>Source Texts:</strong> <em>Dictionary of Old English Corpus</em> encoded in SGML. We need to remove the SGML tags.</li>
+							<li><strong>Special Characters:</strong> Old English <em>&aelig;</em>, <em>&eth;</em>, and <em>&thorn;</em>. These are encoded as SGML <code>&amp;ae;</code>, <code>&amp;d;</code>, and <code>&amp;t;</code>. We want to change them to <a href="https://en.wikipedia.org/wiki/Unicode" target="_blank">Unicode</a> representations.</li>
+							<li><strong>Spelling Variants:</strong> Old English scribes can use <em>and</em> or <em>ond</em> spellings for the same word. We may want to count them both together.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Uploading, Scrubbing, and Cutting</h3>
+						<ul>
+							<li>Go to <b>Manage &gt; Upload</b>. Click Browse and navigate to the <code>DAZ/FilesToUse</code> folder. Select <b>A1.3_Dan_T00030.txt</b> and <b>A3.3_Az_T00130</b> (the texts of <em>Daniel</em> and <em>Azarias</em>).</li>
+							<li>Go to <b>Prepare &gt; Scrub</b>. Click the chevron next to <b>Lemmas</b> and click the <b>Upload File</b> button. Select <b>DAZ_lemma.txt</b>. This will cause <em>Lexos</em> to treat <em>and</em> and <em>ond</em> as the same form.</li>
+							<li>Click the chevron next to <b>Consolidations</b> and click the <b>Upload File</b> button. Select <b>DAZ_consolidation.txt</b>. This will change all examples of <em>&eth;</em> to <em>&thorn;</em>.</li>
+							<li>Click the chevron next to <b>Special Characters</b> and selection <b>Dictionary of Old English SGML</b> from the dropdown menu. This will tell <em>Lexos</em> to convert SGML character encodings to Unicode equivalents.</li> 
+							<li>Go to <b>Manage &gt; Select</b>. Hold down the control/command key and click on the row containing <b>A3.3_Az_T00130</b> to de-activate it.</li>
+							<li>Go to <b>Prepare &gt; Cut</b>. Enter <b>450</b> as the segment size. Click the <b>Preview Cuts</b> button to see the results. Click the <b>Apply Cuts</b> to apply them permanently.</li>
+							<li>Return to <b>Manage &gt; Select</b>. Hold down the control/command key and click on the row containing <b>A3.3_Az_T00130</b> to re-activate it.</li>
+						</ul>
+					</section>				
+					<section>
+						<h3>Hierarchical Clustering</h3>
+						<p class="pull-left">A form of <em>cluster analysis</em> that seeks to detect similarities between documents by sorting them into hierarchically related clusters.</p>
+						<h4 class="pull-left">Considerations:</h4> 
+						<ul>
+							<li>What do you want to cluster, whole documents or segments?</p>
+							<li>Distance Metric (how to measure the distance between clusters)</li>
+							<li>Linkage Method (how clusters should be merged)</li>
+							<li>Visualisation: How to read a dendrogram</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Instructions</h3>
+						<p class="pull-left">For this experiment, the default distance metric and linkage method options are fine.</p>
+						<ul>
+							<li>Go to <b>Analyze &gt; Clustering &gt; Hierarchical Clustering</b>.</p>
+							<li>Enter a <b>Dendrogram Title</b> and click <b>Get Dendrogram</b>. You may need to scroll down to see the result.</li>
+						</ul>
+						<p class="pull-left">Segment 5 of <em>Daniel</em> should cluster with <em>Azarias</em>. This is the portion of <em>Daniel</em> that we know to be related to <em>Daniel</em>.</p>
+					</section>
+					<section>
+						<h3>How to Read a Dendrogram</h3>
+						<iframe width="620" height="515" data-src="https://www.youtube.com/embed/MX6AUX1b1w0" frameborder="0" allowfullscreen></iframe>
+					</section>
+				</section>
+				<section>
+					<section data-transition="zoom">
+					<h4>Observing the Influence of<br/>Orthography in Middle English</h4>
+						<a href="http://www.bl.uk/manuscripts/Viewer.aspx?ref=cotton_ms_cleopatra_c_vi_f002r" target="_blank"><img style="height:450px;width:450px;" data-src="images/AncreneWisse.PNG" alt="British Library, Cotton MS Cleopatra C vi, f. 4r"/></a>
+						<p><a href="http://www.bl.uk/manuscripts/Viewer.aspx?ref=cotton_ms_cleopatra_c_vi_f002r" target="_blank"><small>British Library, Cotton MS Cleopatra C vi, f. 4r</small></a></p>
+					</section>
+					<section data-transition="zoom">
+						<ul>
+							<li><b>Source Texts:</b> <a href="https://github.com/WheatonCS/Lexos/tree/master/TestSuite/Experiments/MiddleEnglishTexts/FilesToUse" target="_blank"><code>https://github.com/WheatonCS/Lexos/tree/master/TestSuite/Experiments/MiddleEnglishTexts/FilesToUse</code></a></li>
+							<li><b>Purpose:</b> Determine what effect orthography has on document similarity.</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Background</h4>
+						<ul style="font-size: smaller;">
+							<li>Middle English is characterised by a high number of dialectal features and spelling variations, which can create challenges for computational processing and make comparison difficult.</li>
+							<li>The AB language is a term coined in 1929 by J.R.R. Tolkien to refer to the standardised language of two manuscripts of <em>Ancrene Wisse</em>, a guide for anchoresses.</li>
+							<li>The language is shared by a group of texts from the English West Midlands including <em>Hali Meiðhad</em> ("Holy Maidenhood"), <em>Sawles Warde</em> ("Refuge of the Souls"), and a life of <em>Saint Juliana</em>.</li>
+							<li><em>The Lambeth Homilies</em> is a collection of sermons which also comes from the West Midlands but does not share the AB language forms. <em>The Kentish Sermons</em> come from southeastern England.</li>
+							<li>In order explain the dendrogram we get if we compare these texts, it is useful to get a sense of the relative prominence of certain words.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Instructions</h3>
+						<ul>
+							<li>Go to <b>Manage &gt; Upload</b>. Click Browse and navigate to the <code>MiddleEnglishTexts/FilesToUse</code> folder. Upload all the texts.</li>
+							<li>Go to <b>Analyze &gt; Clustering &gt; Hierarchical Clustering</b>.</li>
+							<li>Enter a <b>Dendrogram Title</b> and click <b>Get Dendrogram</b>. You may need to scroll down to see the result. Notice that the West Midland texts (<em>Ancrene Wisse</em>, <em>Sawles Warde</em>, <em>Juliana</em>, <em>Hali Meiðhad</em>, and the <em>Lambeth Homilies</em>) are split into two clusters. The Kentish Sermons seem to be closer to the <em>Juliana</em> group. How do we know what accounts for this?</li>
+							<li>Go to <b>Visualize &gt; MultiCloud</b>. Click <b>Toggle All</b> to select all the texts. Then click <b>Get Graphs</b>. You may need to scroll down to see the result.</li>
+							<li>Are there spellings that seem to dominate certain texts? You can drag and drop clouds to re-order them for easier comparison.</li>
+							<li>Try the <b>Word Cloud</b> and <b>BubbleViz</b> tools in the <b>Visualize</b> menu for further insight. Can you identify what might be affecting the clustering algorithm?</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Instructions (Continued)</h3>
+						<ul>
+							<li>Go to <b>Prepare &gt; Scrub</b>. Click on the chevron next to consolidations and enter
+<pre>þet,þat:þat
+ant,and:and</pre>
+							Click. <b>Apply Scrubbing</b>. This will consolidate spelling variants of these words into one form each.</li>
+							<li>Go to <b>Analyze &gt; Clustering &gt; Hierarchical Clustering</b> and click the <b>Get Dendrogram</b> button.</li>
+						</ul>
+						<p class="pull-left">Notice that all the West Midlands texts form a single cluster. There is a good chance that the Kentish Sermons most closely resemble the <em>Lambeth Homilies</em> because they share a common genre (sermon). However, the clustering algorithm seems to be more sensitive to the dialectal orthography than to the genre.</p>
+						<p class="pull-left">Using word clouds, we have been able to identify what disrupts this pattern in order to obtain clearer results.</p>
+					</section>
+					<section>
+						<h3>Uses of Word Clouds for Document Exploration</h3>
+						<ul>
+							<li>Get an impression of the content of your documents.</li>
+							<li>Identify Stop Words or Other Scrubbing Needs.</li>
+							<li>Useful way of conveying token prominence in presentations.</li>
+							<li>Can be used to visualise the topics in a topic model (see <b>Visualizing Topic Models</b> below).</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h4>The <em>Dream of the Red Chamber</em> Experiment</h4>
+						<a href="https://commons.wikimedia.org/wiki/File:Jimao_Dream_of_the_Red_Chamber.jpg" target="_blank"><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Jimao_Dream_of_the_Red_Chamber.jpg/330px-Jimao_Dream_of_the_Red_Chamber.jpg" alt="A page from the "Jimao manuscript" (one of the Rouge versions) of the novel, c. 1759." style="height:450px;width:450px;"/></a>
+						<a href="https://commons.wikimedia.org/wiki/File:Jimao_Dream_of_the_Red_Chamber.jpg" target="_blank"><small>A page from the "Jimao manuscript" (己卯本) of the novel <em>Dream of the Red Chamber</em>, 1759. This is one of the earliest surviving manuscripts of the novel before its print publication.</small></a>
+					</section>
+					<section>
+						<ul>
+							<li><b>Source Texts:</b> <a href="https://github.com/WheatonCS/Lexos/tree/master/TestSuite/Experiments/SimilarityQuery/FileToUse/%E7%BA%A2%E6%A5%BC%E6%A2%A6HongLouMeng_Dream_of_the_Red%20Chamber" target="_blank"><code>https://github.com/WheatonCS/Lexos/tree/master/TestSuite/Experiments/SimilarityQuery/红楼梦HongLouMeng_Dream_of_the_Red Chamber</code></a></li>
+							<li><b>Purpose:</b> Explore issues of authorship attribution.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Background</h3>
+						<p class="pull-left"><em>Dream of the Red Chamber</em>, composed by Cao Xueqin sometime in the middle of the 18th century, is one of China's Four Great Classical Novels. The novel circulated in manuscript copies until its print publication in 1791. While the first 80 chapters were written by Cao Xueqin, Gao E, who prepared the first and second printed editions with his partner Cheng Weiyuan in 1791–2, added 40 additional chapters to complete the novel. [Source: <a href="https://en.wikipedia.org/wiki/Dream_of_the_Red_Chamber" target="_blank">Wikipedia</a>]</p>
+					</section>
+					<section>
+						<h3>Cosine Similarity</h3>
+						<p class="pull-left">Cosine similarity ranks documents based on their similarity (the inverse of document distance) but does not attempt to cluster them.</p>
+					</section>
+					<section>
+						<h3>Instructions</h3>
+						<ul>
+							<li>Go to <b>Manage &gt; Upload</b>. Click Browse and navigate to the <code>SimilarityQuery/红楼梦HongLouMeng_Dream_of_the_Red Chamber</code> folder. Upload all the texts.</li>
+							<li>Go to <b>Analyze &gt; Similarity Query</b>. Select <b>Chapter67</b> to be compared to the other files.</li>
+							<li>Since Chinese does not use spaces between words, choose <b>1-gram by Characters</b> in the <b>Tokenize</b> section. This will treat each character as a token.</li>
+							<li>Click the <b>Get Similarity Rankings</b> button.</li>
+						</ul>
+						<p class="pull-left">What might we conclude about the authorship of <em>Dream of the Red Chamber</em> from the resulting rankings?</p>
+					</section>
+				</section>
+				<section>
+					<section>
+					<h3>The <em>Pride and Prejudice</em> Experiment</h3>
+					<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/PrideAndPrejudiceTitlePage.jpg/556px-PrideAndPrejudiceTitlePage.jpg" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/PrideAndPrejudiceTitlePage.jpg/556px-PrideAndPrejudiceTitlePage.jpg" alt="Title page from the first edition of the first volume of Pride and Prejudice" height="486"/></a>
+					<br/>
+					<small>Source: Lilly Library, Indiana University</small>
+					</section>
+					<section>
+						<ul>
+							<li><b>Source Text:</b> <code>Lexos/TestSuite/Experiments/RollingWindow/FilesToUse/pride_and_prejudice_ms.txt</code></li>
+							<li><b>Purpose:</b> Examine or compare the frequency of terms over the course of a text.</li>
+						</ul>
+					</section>
+					<section>
+					<h3>Background</h3>
+						<p class="pull-left">A common task in text analysis is to observe changes in linguistic usage over the course of a text or collection. The <em>Lexos</em> Rolling Windows tool creates a visualisation of these changes.</p>
+						<p class="pull-left">For this experiment, we will use a version of Jane Austen's <em>Pride and Prejudice</em> with milestones added at each chapter break. Milestones are strings of text used by <em>Lexos</em> to identify structural divisions. Although we have used chapters, you can place them anywhere in the source text(s).</p>
+					</section>
+					<section>
+						<h3>Rolling Windows</h3>
+						<ul>
+							<li>Traces the frequency of features within a designated window of tokens over the course of a document.</li>
+							<li>Can be used to identify small- and large-scale patterns of usage of individual features or to compare these patterns for multiple features.</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Experiment 1:</h4>
+						<div class="pull-left">
+						<ul>
+							<li>Go to <b>Manage &gt; Upload</b> and upload <b>pride_and_prejudice_ms</b> from the <code>RollingWindow/FilesToUse</code>. This file has the string <b>Milestone</b> inserted at each chapter break.</li>
+							<li>Go to Rolling Windows and select the options represented below:</li>
+						</ul>
+						<p><b>Calculation Type:</b> <input type="radio" checked="checked"/> Rolling Average</p>
+						<p><b>Search Pattern(s):</b> Enter up to 6 comma-separated words</p>
+						<p><b>Search pattern(s) as:</b> <input type="radio" checked="checked"/> Word(s) (Tokens)</p>
+						<p><b>Define Window:</b></p>
+						<p style="margin-left: 15px;">
+						<b>Size of Rolling Window:</b> <input type="text" value="1000"/>
+						<br/>
+						<input type="radio" checked="checked"/> Window of Words <b>Count by words (tokens)</b>
+						<br/>
+						<input type="checkbox" checked="checked"/> <b>Document has Milestones</b>
+						<br/>
+						<b>Milestone Delimiter:</b> <input type="text" value="MILESTONE"/></p>
+						</div>
+					</section>
+					<section>
+						<h4>Experiment 2:</h4>
+						<div>
+						<div class="pull-left" style="width:60%;float:left;">
+						<ul>
+							<li>Go to <b>Prepare &gt; Scrub</b></li>
+							<li>Upload or copy and paste the <a href="http://ir.dcs.gla.ac.uk/resources/linguistic_utils/stop_words" target="_blank">Glasgow stop word list</a>. Click the <b>Apply Scrubbing</b> button.</li>
+							<li>Repeat Experiment 1.</li>
+						</ul>
+						<p style="margin-top:50px;">What changes? Why?</p>
+						</div>
+						<img src="https://s3.amazonaws.com/epicstreamlive/assets/uploads/videoscover/760x400/pridez.jpg" alt="Pride and Prejudice and Zombies" width="300"style="float:right;"/>
+						</div>
+					</section>
+				</section>
+				<section>
+					<h3>Visualizing Topic Models</h3>
+						<ul>
+							<li><b>Source File:</b> <code>more-data/CardsAgainstTheHumanities/word-topic-counts.txt</code></li>
+							<li><b>Purpose:</b> Examine or compare the frequency of terms over the course of a text.</li>
+						</ul>
+						<p class="pull-left">Topic modelling is a machine learning technique to reverse engineer the "themes" of documents in the form of lists of words (called "topics"). The most common implementation tool is Mallet, but its output is notoriously difficult to visualise. The <em>Lexos</em> MultiCloud tool allows you to upload the Mallet data directly to generate "topic clouds"&mdash;word clouds based on your topics. It even allows you to convert your topics to documents and cluster them.</p>
+						<p class="pull-left">The sample Mallet files contain a topic model of the satirical game <em>Cards against the Humanities</em>.</p>
+						<p class="pull-left">For further information topic clouds and how to generate them, see <a href="http://scottkleinman.net/blog/2014/07/25/how-to-create-topic-clouds-with-lexos/" target="_blank">How to Create Topic Clouds with Lexos</a> and <a href="http://scottkleinman.net/blog/2015/09/08/how-to-create-and-cluster-topic-files-in-lexos/" target="_blank">How to Create and Cluster Topic Clouds in Lexos</a>.</p>
+					</ul>
+				</section>
+				<section>
+				<h3>Other <em>Lexos</em> Functions (just in case I forget)</h3>
+				<ul>
+					<li>Download Scrubbed and Cut Files</li>
+					<li>Download Workspace for Later Upload</li>
+					<li>View or Download Your Document-Term Matrix</li>
+					<li>Generate Statistics about Your Corpus</li>
+					<li>K-Means Clustering (Forces documents into a set number of topics)</li>
+					<li>Manage active documents</li>
+					<li>"Topwords" statistical tests for most prominent words</li>
+				</ul>
+				</section>
+				<section>
+				<h3>Data for Further Experiments</h3>
+				<ul>
+					<li>The <code>more-data</code> folder contains a corpus of texts by Jane Austen and Emily Bront&euml; borrowed from the Dariah-DE datasets.</li>
+					<li>A selection of clustering experiments using a collection of Edgar Allan Poe texts is provided by <em>Lexos</em> co-developer Mark LeBlanc at <a href="https://github.com/WheatonCS/aGoodMystery/tree/master/step_2_Clustering" target="_blank">https://github.com/WheatonCS/aGoodMystery/tree/master/step_2_Clustering</a>. Just download and extract the zip files for each experiment.</li>
+				</ul>
+				</section>
+				<section>
+				<h3><em>In the Margins</em> (Beta)</h3>
+				<p class="pull-left">A <a href="scalar.usc.edu/" target="_blank">Scalar</a> book with the following sections:</p>
+				<ul>
+					<li>Lexomics: Overview of work done by the Lexomics Work Group</li>
+					<li><em>Lexos</em>: Documentation for how to use <em>Lexos</em></li>
+					<li>Topics: Techniques, Methods, Best Practices</li>
+					<li>Bibliography and Glossary</li>
+				</ul>
+				</section>
+				<section>
+					<h1>THE END</h1>
+					<br/>
+					<p>Made with <a href="http://lab.hakim.se/reveal-js/#/">Reveal.js</a>
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<!-- Access GitHub Repo -->
+<!-- 		<script src="https://code.jquery.com/jquery-2.1.3.min.js">
+		</script>
+		<script src="Repo.js-master/repo.min.js"></script>
+		<script>
+			$('#LexosGitHub').repo({ user: 'WheatonCS', name: 'Lexos' });
+		</script>-->
+
+		<script src="../revealjs/lib/js/head.min.js"></script>
+		<script src="../revealjs/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				viewDistance: 5,
+
+//				transition: 'concave', // none/fade/slide/convex/concave/zoom
+
+    // Parallax background image
+    parallaxBackgroundImage: '', // e.g. "reveal-parallax-1.jpg"
+
+    // Parallax background size
+    parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
+
+    // This slide transition gives best results:
+    transition: 'slide',
+				
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../revealjs/plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+<!--		<script src="https://code.jquery.com/jquery-2.1.3.min.js">
+		</script>-->
+		<script>
+//		Reveal.addEventListener( 'trans', function() {
+//			var transitionType = $(".transitions").attr("data-state").replace("trans ", "");
+//			var opt = {transition: transitionType};
+//			console.log(opt);
+//			Reveal.configure(opt);
+//		}, false );
+		</script>
+	</body>
+</html>

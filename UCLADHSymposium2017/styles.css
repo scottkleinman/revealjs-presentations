@@ -1,0 +1,24 @@
+.reveal a:hover { text-decoration: underline}
+button.navigate-up.enabled,
+button.navigate-down.enabled,
+button.navigate-left.enabled,
+button.navigate-right.enabled {outline: none;}
+.reveal h1 { font-size: 3.77em; }
+
+.reveal h2 { font-size: 2.11em; }
+
+.reveal h3 { font-size: 1.55em; }
+
+.reveal h4 { font-size: 1em; }
+
+.reveal h1 { text-shadow: none; }
+
+.reveal a {
+  color: #8b7c69;
+}
+
+.reveal p { margin: 20px 0; line-height: 1.3; font-size: 26px; }
+.reveal ul li, .reveal ol li { font-size: 26px; }
+.smaller { font-size: smaller; }
+.pull-left { text-align: left; }
+/*https://www.youtube.com/watch?v=EuSfkARfzIY&app=desktop*/
