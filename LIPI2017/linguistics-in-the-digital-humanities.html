@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Linguistics in the Digital Humanities</title>
+
+		<meta name="description" content="Slides from the Linguistics in Practice Institute at California State University, Northridge, May 6, 2017">
+		<meta name="author" content="Scott Kleinman">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../revealjs/css/reveal.css">
+		<link rel="stylesheet" href="../revealjs/css/theme/serif.css" id="theme">
+		<link rel="stylesheet" href="styles.css" id="theme">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+		<!-- Code syntax highlighting -->
+<!-- 		<link rel="stylesheet" href="../revealjs/lib/css/zenburn.css">
+ -->
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			//link.href = window.location.search.match( ../revealjs/print-pdf/gi ) ? '../revealjs/css/print/pdf.css' : '../revealjs/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs/lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<style type="text/css">
+			h1 {font-size: 48pt !important;}
+			h2 {font-size: 36pt !important;}
+			h3 {font-size: 32pt !important;}
+			h4 {font-size: 28pt !important;}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+		<meta name="description" content="Slides from the Linguistics in Practice Institute at California State University, Northridge, May 6, 2017">
+
+					<h1>Linguistics in the Digital Humanities</h1>
+					<h4>Linguistics in Practice Institute at California State University, Northridge, May 6, 2017</h4>
+					<p class="smaller"><a href="http://scottkleinman.net">Scott Kleinman</a>, California State University, Northridge / <a href="mailto:scott.kleinman@csun.edu">scott.kleinman@csun.edu</a></p>
+				</section>
+				<section data-transition="concave">
+					<script>
+					function reloadIframe(el) {
+						el = "#"+el;
+						$(el).attr("src", $(el).attr("src"));
+					}
+					</script>
+					<p class="pull-right"><button class="btn btn-primary" onclick="reloadIframe('whatisdigitalhumanities')">Reload</button></p>
+					<h3>What is (are) (the) Digital Humanities?</h3>
+					<p><a href="http://whatisdigitalhumanities.com/" target="_blank">http://whatisdigitalhumanities.com/</a></p>
+					<div width="1000">
+					<iframe id="whatisdigitalhumanities" data-src="http://whatisdigitalhumanities.com/" width="1000" height="500" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="auto"></iframe>
+					</div>
+				</section>
+ 				<section data-transition="concave">
+					<h1>Some Overlapping Fields in DH</h1>
+					<ul>
+						<li>Digital History: <a href="http://dsl.richmond.edu/emancipation/" target="_blank">Visualizing Emancipation</a></li>
+						<li>Digital Editing: <a href="http://shelleygodwinarchive.org/sc/oxford/frankenstein/notebook/a/#/p21" target="_blank"><em>Frankenstein</em> Draft Notebook A from the Shelley-Godwin Archive</a></li>
+						<li>Library and Information Science: <a href="https://hcommons.org/core/" target="_blank">Humanities Commons CORE</a></li>
+						<li>Text Mining and Literary Text Analysis
+						<ul>
+							<li><a href="http://loveletter.viraltexts.org/neatline/fullscreen/exhibit#records/48" target="_blank">Viral Texts</a></li>
+							<li><a href="https://tedunderwood.files.wordpress.com/2014/12/finalfreq.jpeg" target="_blank">References to money in 19th-20th century fiction</a></li>
+						</ul>
+						</li>
+				</section>
+ 				<section data-transition="concave">
+					<h1>What is Text Analysis</h1>
+					<br/>
+					<h4 class="pull-left">My current definition:</h4>
+					<p class="pull-left">(Computationally) finding quantitative patterns in natural language samples and attributing meaning to these patterns.</p>
+					<p class="pull-left">Computational techniques for manipulating and explore natural language are often referred to as Natural Language Processing (NLP).</p>
+				</section>
+
+				<section>
+					<section>
+						<h4>A Section of the Toronto Corpus Created<br>for the <em>Dictionary of Old English</em></h4>
+						<div>
+						<p class="pull-left">
+						&lt;s&gt;Him &t;a Azarias inge&t;oncum hleo&t;rede halig &t;urh hatne lig  dreag d&ae;dum georn  dryhten herede  wis in weorcum  ond &t;as word acw&ae;&d;: Meotud allwihta  &t;u eart meahtum swi&d; ni&t;as to nerganne.&lt;/s&gt;<br>
+						&lt;s&gt;Is &t;in noma m&ae;re  wlitig ond wuldorf&ae;st ofer wer&t;eode.&lt;/s&gt;<br>
+						&lt;s&gt;Sindon &t;ine domas on d&ae;da gehwam so&d;e geswi&d;de ond gesigef&ae;ste  eac &lt;corr&gt;&t;ine&lt;/corr&gt; willan in woruldspedum ryhte mid r&ae;de.&lt;/s&gt;<br>
+						&lt;s&gt;Rodera waldend  geoca us georne  g&ae;sta scyppend  ond &t;urh hyldo help  halig dryhten  nu we &t;ec for &t;earfum ond for &t;reanydum ond fore ea&d;medum arena bidda&t; lege bilegde.&lt;/s&gt;</p>
+						</div>
+					</section>
+					<section>
+						<h3>The <em>Oxford English Dictionary</em> before 2000</h3>
+						<img src="images/NED_iron.png" alt='Entry for "iron" in the New English Dictionary' height="500"/>
+					</section>
+					<section>
+						<h3>From the <em>Oxford English Dictionary</em> Today</h3>	
+						<img src="images/OED_iron.png" alt='Entry for "iron" in the Oxford English Dictionary'/>						
+					</section>
+				</section>
+
+				<section>
+					<h4>Zipf's Law</h4>
+					<h5>(illustrated using the Brown Corpus of American English)</h5>
+					<img src="images/zipfs-law.png" alt="Plot of the term rankings in the Brown Corpus, showing Zipf's Law"/>
+				</section>
+
+				<section>
+					<h3>Types of Text Analysis</h3>
+					<br/>
+					<ul>
+						<li>Structured v. Unstructured Data: Data accompanied by tagging or metadata is structured.</li>
+						<li>Supervised v. "Unsupervised" Algorithms: It is almost impossible to implement an experiment without <em>some</em> human decision-making.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Topic Model of <em>PMLA</em></h3>
+					<a href="http://agoldst.github.io/dfr-browser/demo/" target="_blank">http://agoldst.github.io/dfr-browser/demo/</a>
+				</section>
+				<section>
+					<section>
+						<h3>Examples of Visualising Texts<br/>and Feature Selection</h3>
+					</section>
+					<section data-transition="concave">
+						<h4>Google N-Gram Viewer Shows the Frequency of Words and Phrases in the Google Books Corpus</h4>
+						<iframe name="ngram_chart" data-src="https://books.google.com/ngrams/interactive_chart?content=government%2C+constitution%2C+federal+government&amp;year_start=1700&amp;year_end=2000&amp;corpus=15&amp;smoothing=3&amp;share=&amp;direct_url=t1%3B%2Cgovernment%3B%2Cc0%3B.t1%3B%2Cconstitution%3B%2Cc0%3B.t1%3B%2Cfederal%20government%3B%2Cc0" width="1000" height="300" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
+						<small class="pull-left" style="margin-left:22px;margin-right:2px;">Occurrences of the phrases phrases "government", "constitution", "federal government" visualised in the Google N-Gram Viewer: https://books.google.com/ngrams/.</small>
+					</section>
+					<section data-transition="concave">
+						<h4>Statistical Insight from Term Vector Distances</h4>
+						<p>Cosine Distance and Multidimensional Scaling</p>
+						<img src="images/plot_getting_started_cosine_mds.png" alt="Plot of Austen and Bront&euml; novels using cosine similarity and multidimensional scaling" width="75%" height="75%"/>
+					</section>
+					<section data-transition="concave">
+						<p>Cluster Analysis</p>
+						<img src="images/plot_getting_started_ward_dendrogram.png" alt="Dendrogram of cluster analaysis of Austen and Bront&euml; novels using Ward's method" width="75%" height="75%"/>
+					</section>
+					<section data-transition="concave">
+						<h4>Voyant Provides Visual Tools for Text Exploration</h4>	
+						<iframe width="1000" height="550" data-src="http://voyant-tools.org/?corpus=1445204720176.505"></iframe>
+						<small><a href="http://voyant-tools.org/?corpus=1445204720176.505" target="_blank">The 1840 Democratic Political Party Platform visualised in Voyant</a><br/>http://voyant-tools.org/</small>
+					</section>
+					<section data-transition="concave">
+						<h4>AntConc</h4>
+						<img src="images/AntConc_1.png" alt="Screen shot of AntConc" width="75%" height="75%"/>
+					</section>
+				</section>
+
+				<section>
+					<h3>Text Analysis Workflow 1</h3>
+					<br/>
+					<ul>
+						<li>Collection</li>
+						<li>Pre-Processing</li>
+						<li>Statistical Processing</li>
+						<li>Visualisation</li>
+						<br/>
+						<li>Narrative of Meaning</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Collection</h3>
+					<br>
+					<p>Where is the data? What form is it in? Is there a pre-existing corpus?</p>
+				</section>
+				<section>
+					<h3>Pre-Processing</h3>
+					<br/>
+					<ul>
+						<li>Clean up OCR</li>
+						<li>Remove metadata, punctuation, digits, stop words</li>
+						<li>Transform tokens (consolidation, lemmatisation)</li>
+						<li>Slicing and dicing</li>
+						<li>Assigning labels</li>
+					</ul>
+					<p class="pull-left">Pre-processing creates a “deformance” version of the original text for analysis.</p>
+				</section>
+				<section>
+					<h3>Statistical Processing</h3>
+					<br/>
+					<ul>
+						<li>Token counting (e.g. characters, words, n-grams)</li>
+						<li>Normalisation (e.g. to compare texts of unequal size)</li>
+						<li>Frequency/Probability Comparison (e.g. between the number of times a word occurs in two texts)</li>
+						<li>Clustering (identifying groups of tokens/texts with common statistical properties)</li>
+						<li>Shape quantitative information about the texts for visualisation/interpretation.</li>
+					</ul>
+					<p class="pull-left">Statistical processing transforms the text from natural language to quantitative data. This type of “deformance” typically involves dimensionality reduction, a simplification of the data so that it can be represented in two-dimensional space.</p>
+				</section>
+				<section>
+					<h3>Visualisation</h3>
+					<br/>
+					<ul>
+						<li>Arranging quantitative data in graphical format to make it (hopefully) more interpretable than formats in which the data is stored.</li>
+						<li>Visualisation is “the reification of misinformation” (Johanna Drucker), so it requires a clear account of the procedures used to make the graph and critical literacy about how to interpret visualisations on the par of the reader.</li>
+				</section>
+				<section>
+					<h3>Narrative of Meaning</h3>
+					<br/>
+					<ul>
+						<li>An account of the significance of the results of text analysis.</li>
+						<li>Must include an account of the decisions made as part of pre-processing, statistical processing, and visualisation.</li>
+				</section>				
+				<section>
+					<h3>Text Analysis Workflow 2</h3>
+					<br/>
+					<ul>
+						<li>Re-consider some of the decisions you have made.</li>
+						<li>Repeat Text Analysis Workflow 1.</li>
+					</ul>
+				</section>
+				<!-- Lexomics Video -->
+				<!-- <section data-background-iframe="http://cs.wheatoncollege.edu/lexomics/"> -->
+				</section>
+				<section>
+					<h2>Goals of <em>Lexos</em></h2>
+					<ul>
+						<li>Easy-to-use.</li>
+						<li>Provide a complete workflow.</li>
+						<li>Cater to small and medium-sized corpora.</li>
+						<li>Cater to non-standard languages and languages with non-Latin writing systems.</li>
+						<li>Embed the critical process into the user interface.</li>
+					</ul>
+					<p><em>Lexos</em> online: <a href="http://lexos.wheatoncollege.edu" target="_blank">http://lexos.wheatoncollege.edu</a>
+				</section>
+				<section>
+				<h3>Exploration with Python and NLTK</h3>
+				<p class="pull-left">A few experiments taken from <a href="https://github.com/DistrictDataLabs/intro-to-nltk/blob/master/NLTK.ipynb" target="_blank">https://github.com/DistrictDataLabs/intro-to-nltk/blob/master/NLTK.ipynb</a>.
+				</section>
+				<section>
+				<h3>Digital Humanities Is a Discussion<br>about Digital <em>Methods</em> of<br>Analysis and Communication</h3>
+				<br>
+				<p>Methods can be applied to born-digital materials as well as remediated materials. Example: Ben Schmidt, <a href="http://benschmidt.org/profGender/#%7B%22database%22%3A%22RMP%22%2C%22plotType%22%3A%22pointchart%22%2C%22method%22%3A%22return_json%22%2C%22search_limits%22%3A%7B%22word%22%3A%5B%22funny%22%5D%2C%22department__id%22%3A%7B%22%24lte%22%3A25%7D%7D%2C%22aesthetic%22%3A%7B%22x%22%3A%22WordsPerMillion%22%2C%22y%22%3A%22department%22%2C%22color%22%3A%22gender%22%7D%2C%22counttype%22%3A%5B%22WordCount%22%2C%22TotalWords%22%5D%2C%22groups%22%3A%5B%22unigram%22%5D%7D" target="_blank">Gendered Language on ratemyfrofessor.com</a>.<a href="http://benschmidt.org/wp/wp-content/uploads/2015/02/top-schools.png" target="_blank">*</a></p>
+				</section>
+				<section data-transition="concave">
+				<table>
+					<tr>
+						<td><img src="images/camelota.png" alt="King Arthur and his knights outside Camelot"/></td>
+						<td><img src="images/camelot0.png" alt="King Arthur: 'Camelot!'" width="75%" height="75%"/></td>
+					</tr>
+					<tr>
+						<td><img src="images/camelot1.png" alt="Sir Lancelot: 'Camelot!'"/></td>
+						<td><img src="images/camelot2.PNG" alt="Sir Galahad: 'Camelot!'" width="55%" height="55%"/></td>
+					</tr>
+					<tr>
+						<td colspan="2"><img src="images/camelot3.png" alt="Squire: 'It's only model."/></td>
+					</tr>
+				</table>
+				</section>	
+				<section>
+					<h1>THE END</h1>
+					<br/>
+					<p>Made with <a href="http://lab.hakim.se/reveal-js/#/">Reveal.js</a>
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<!-- Access GitHub Repo -->
+ 		<script src="https://code.jquery.com/jquery-2.1.3.min.js">
+		</script>
+		<script src="Repo.js-master/repo.min.js"></script>
+		<script>
+			$('#LexosGitHub').repo({ user: 'WheatonCS', name: 'Lexos' });
+		</script>
+
+		<script src="../revealjs/lib/js/head.min.js"></script>
+		<script src="../revealjs/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				viewDistance: 5,
+
+//				transition: 'concave', // none/fade/slide/convex/concave/zoom
+
+    // Parallax background image
+    parallaxBackgroundImage: '', // e.g. "reveal-parallax-1.jpg"
+
+    // Parallax background size
+    parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
+
+    // This slide transition gives best results:
+    transition: 'slide',
+				
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../revealjs/plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+<!--		<script src="https://code.jquery.com/jquery-2.1.3.min.js">
+		</script>-->
+		<script>
+//		Reveal.addEventListener( 'trans', function() {
+//			var transitionType = $(".transitions").attr("data-state").replace("trans ", "");
+//			var opt = {transition: transitionType};
+//			console.log(opt);
+//			Reveal.configure(opt);
+//		}, false );
+		</script>
+	</body>
+</html>
