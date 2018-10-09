@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>DHSIN - Lecture 1</title>
+
+		<meta name="description" content="DHSIN - Lecture 1">
+		<meta name="author" content="Scott Kleinman">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../revealjs/css/reveal.css">
+		<link rel="stylesheet" href="../revealjs/css/theme/serif.css" id="theme">
+		<link rel="stylesheet" href="styles.css" id="theme">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+		<!-- Code syntax highlighting -->
+<!-- 		<link rel="stylesheet" href="../revealjs/lib/css/zenburn.css">
+ -->
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			//link.href = window.location.search.match( ../revealjs/print-pdf/gi ) ? '../revealjs/css/print/pdf.css' : '../revealjs/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../revealjs/lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<style type="text/css">
+			h1 {font-size: 32pt !important;}
+			h2 {font-size: 28pt !important;}
+			h3 {
+				font-size: 20pt !important;
+				font-weight: bold !important;
+				text-align:center;
+			}
+			h4 {
+				font-size: 20pt !important;
+				font-weight: bold !important;
+				text-align:left;
+			}
+			blockquote {
+				font-size: 18pt !important;
+				font-style: normal !important;
+				text-align: left;
+				float: left;
+				width: 100% !important;
+			}
+			.trans { font-style: italic !important; }
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>DHSIN - Lecture 1</em></h1>
+					<p class="smaller"><a href="http://scottkleinman.net">Scott Kleinman</a> <br> California State University, Northridge <br> <a href="mailto:scott.kleinman@csun.edu">scott.kleinman@csun.edu</a></p>
+				</section>
+
+			<section>
+			<h2>DHSIN Website</h2>
+			<p><a href="http://iacer.edu.np/dhnepal/" target="_blank">http://iacer.edu.np/dhnepal/</a></p>
+			<p>Or go to the</p>
+			<p><a href="http://iacer.edu.np/" target="_blank">http://iacer.edu.np/</a></p>
+			<p>and click the banner.</p>
+			</section>
+
+			<section>
+			<h2>Participant List Spreadsheet</h2>
+			<p><a href="https://goo.gl/o8lPpN" target="_blank">https://goo.gl/o8lPpN</a></p>
+			</section>
+
+			<section>
+			<h2>NEH Office of Digital Humanities Website</h2>
+			<p><a href="https://www.neh.gov/odh" target="_blank">https://www.neh.gov/odh</a></p>
+			</section>
+
+			<section>
+			<h2>Day of DH 2017 Website</h2>
+			<p><a href="http://dayofdh2017.linhd.es/" target="_blank">http://dayofdh2017.linhd.es/</a></p>
+			</section>
+
+			<section>
+			<h2>What is Digital Humanities?</h2>
+			<p><a href="http://whatisdigitalhumanities.com/" target="_blank">http://whatisdigitalhumanities.com/</a></p>
+			</section>
+
+			<section>
+			<h3>Nepali words for "digital", "Humanities", and "Digital Humanities"<br>(according to Google)</h3>
+			<p>digital = डिजिटल</p>
+			<p>humanities = ह्युम्यानिटिज or मानविकी</p>
+			<p>Digital Humanities = French <em>humanit&eacute;s num&eacute;riques</em></p>
+
+			</section>
+
+			<section>
+			<h3>Miriam Posner, "How Did They Make That?"</h3>
+			<p><a href="http://miriamposner.com/blog/how-did-they-make-that/" target="_blank">http://miriamposner.com/blog/how-did-they-make-that/</a></p>
+			</section>
+
+			<section>
+			<p><a href="lecture2.html">Go to Lecture 2</a></p>
+			</section>
+
+			</div>
+		</div>
+
+		<!-- Access GitHub Repo -->
+ 		<script src="https://code.jquery.com/jquery-2.1.3.min.js">
+		</script>
+		<script src="Repo.js-master/repo.min.js"></script>
+		<script>
+			$('#LexosGitHub').repo({ user: 'WheatonCS', name: 'Lexos' });
+		</script>
+
+		<script src="../revealjs/lib/js/head.min.js"></script>
+		<script src="../revealjs/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				viewDistance: 5,
+
+//				transition: 'concave', // none/fade/slide/convex/concave/zoom
+
+    // Parallax background image
+    parallaxBackgroundImage: '', // e.g. "reveal-parallax-1.jpg"
+
+    // Parallax background size
+    parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
+
+    // This slide transition gives best results:
+    transition: 'slide',
+				
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../revealjs/plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+<!--		<script src="https://code.jquery.com/jquery-2.1.3.min.js">
+		</script>-->
+		<script>
+//		Reveal.addEventListener( 'trans', function() {
+//			var transitionType = $(".transitions").attr("data-state").replace("trans ", "");
+//			var opt = {transition: transitionType};
+//			console.log(opt);
+//			Reveal.configure(opt);
+//		}, false );
+		</script>
+	</body>
+</html>
